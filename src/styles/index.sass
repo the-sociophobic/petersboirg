@@ -1,0 +1,66 @@
+
+@import '~bootstrap/scss/bootstrap.scss'
+@import './variables.css'
+@import './grid.scss'
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@1,300;1,500;1,600&display=swap')
+  
+// @font-face
+//   font-family: 'Montserrat'
+//   src: url('./fonts/Montserrat/Montserrat-Regular.ttf') format('truetype')
+
+
+
+$dark: #0C293B
+$light: #E0D5CD
+$footer-light: #E8E2DC
+$main: #F14421
+
+$font-color: $dark
+$background-color: $light
+
+$some-var: var(--some-var)
+
+$breakpoint-1024: 1024px
+
+
+.desktop-only
+  @media screen and ( max-width: $breakpoint-1024 )
+    display: none
+.mobile-only
+  @media screen and ( min-width: $breakpoint-1024 + 1px)
+    display: none
+
+.noselect
+  -webkit-touch-callout: none;  /* iOS Safari */
+  -webkit-user-select: none;    /* Safari */
+  -khtml-user-select: none;     /* Konqueror HTML */
+  -moz-user-select: none;       /* Firefox */
+  -ms-user-select: none;        /* Internet Explorer/Edge */
+  user-select: none;            /* Non-prefixed version, currently supported by Chrome and Opera */
+
+.button
+  padding: 0
+  cursor: pointer
+  outline: none
+  border: none
+  background-color: rgba(0, 0, 0, 0)
+
+*
+  font-family: 'Spectral', sans-serif
+  margin: 0
+  box-sizing: border-box
+  // @extend .noselect
+  // overflow: hidden
+
+.App
+  width: 100%
+  height: 100%
+  overflow-y: scroll
+  @extend .d-flex
+  @extend .flex-column
+  @extend .justify-content-around
+  color: $font-color
+  background-color: $background-color
+
+
