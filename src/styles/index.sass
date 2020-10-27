@@ -67,12 +67,22 @@ $breakpoint-1024: 1024px
 html, body, #root, .App
   width: 100%
   min-height: 100%
+  color: $font-color
+  background-color: $background-color
 .App
   @extend .d-flex
   @extend .flex-column
-  color: $font-color
-  background-color: $background-color
   overflow-x: hidden
+  @include media-breakpoint-up(xs)
+    font-size: 14px
+  @include media-breakpoint-up(sm)
+    font-size: 14px
+  @include media-breakpoint-up(md)
+    font-size: 16px
+  @include media-breakpoint-up(lg)
+    font-size: 16px
+  @include media-breakpoint-up(xl)
+    font-size: 20px
   .content
     // flex: auto
     // flex-grow: 2
@@ -82,7 +92,8 @@ html, body, #root, .App
 
 .header
   @extend .row
-  height: 116px
+  // height: 116px
+  height: calc(116em / 33)
   border: $border
   &__item
     @extend .col-1
@@ -90,9 +101,11 @@ html, body, #root, .App
     @extend .align-items-center
     border-right: $border
     font-family: 'Futura New', sans-serif
-    font-size: 24px
+    // font-size: 24px
+    font-size: calc(24em / 33)
     padding-left: $padding
     position: relative
+    cursor: pointer
     &--active::after
       content: ''
       position: absolute
@@ -109,7 +122,8 @@ html, body, #root, .App
     @extend .justify-content-around
     @extend .align-items-center
     &__item
-      font-size: 37px
+      // font-size: 37px
+      font-size: calc(37em / 33)
       cursor: pointer
       &--active
         color: $main
@@ -118,6 +132,7 @@ html, body, #root, .App
     @extend .d-flex
     @extend .justify-content-center
     @extend .align-items-center
+    cursor: pointer
     img
       width: 70%
 
@@ -135,8 +150,10 @@ html, body, #root, .App
       @extend .justify-content-center
       @extend .align-items-center
       font-family: 'Futura New', sans-serif
-      font-size: 46px
-      line-height: 84px
+      // font-size: 46px
+      font-size: calc(46em / 33)
+      // line-height: 84px
+      line-height: calc(84em / 33)
       margin: 6px 0 20px
       img
     &__projects
@@ -151,10 +168,11 @@ html, body, #root, .App
         &:not(:last-child)
           border-right: $border
         &__name
-          font-size: 39px
+          // font-size: 39px
+          font-size: calc(39em / 33)
           font-weight: 500
         &__place
-          font-size: 29px
+          font-size: calc(29em / 33)
           font-weight: 300
           text-align: right
         &:nth-of-type(1) &__place
@@ -168,7 +186,7 @@ html, body, #root, .App
   &__down
     background-color: $dark
     color: $footer-light
-    font-size: 36px
+    font-size: calc(36em / 33)
     padding-bottom: 63px
     &__text
       @extend .row
@@ -190,13 +208,27 @@ html, body, #root, .App
         @extend .d-flex
         @extend .justify-content-between
         @extend .align-items-center
+        &__item
+          img
+            height: 100%
+          &:nth-of-type(1)
+            // height: calc(66em / 33)
+            height: calc(66em / 33)
+          &:nth-of-type(2)
+            // height: calc(76em / 33)
+            height: calc(76em / 33)
+          &:nth-of-type(3), &:nth-of-type(4)
+            // height: calc(56em / 33)
+            height: calc(56em / 33)
       &__social
         @extend .col-3
         @extend .d-flex
         @extend .justify-content-end
         &__item
-          margin-left: 68px
-          height: 68px
+          // margin-left: 62px
+          margin-left: calc(62em / 33)
+          // height: 62px
+          height: calc(62em / 33)
           img
             height: 100%
 
@@ -210,14 +242,19 @@ html, body, #root, .App
   &__background
     @extend .col-8
     clip-path: circle(60% at 50% 105%)
-    margin-top: -7%
+    // margin-top: -7%
+    img
+      width: 100%
   &__name
     @extend .col-9
     @extend .text-center
     font-family: 'Futura New', sans-serif
-    font-size: 41px
-    line-height: 130px
-    margin-bottom: 90px
+    // font-size: 41px
+    font-size: calc(41em / 33)
+    // line-height: 130px
+    line-height: calc(130em / 33)
+    // margin-bottom: 90px
+    margin-bottom: calc(90em / 33)
     &::after
       @extend .col-3
       height: 2px
@@ -230,24 +267,25 @@ html, body, #root, .App
   &__description
     @extend .col-7
     @extend .text-center
-    font-size: 82px
-    margin-bottom: 177px
+    font-size: calc(82em / 33)
+    // margin-bottom: calc(177em / 30)
+    margin-bottom: calc(100em / 33)
     font-weight: 400
     position: relative
   &__quote
     @extend .col-1
-    font-size: 387px
+    font-size: calc(387em / 33)
     &--left
-      transform: rotate(180deg) translateY(30%)
+      transform: rotate(180deg) translateY(40%)
     &--right
   &__tagline
     @extend .col-9
     @extend .text-center
     font-family: 'Futura New', sans-serif
     font-weight: 600
-    font-size: 36px
-    line-height: 84px
-    margin-bottom: 87px
+    font-size: calc(41em / 33)
+    line-height: calc(84em / 33)
+    margin-bottom: calc(87em / 33)
     position: relative
     &::after
       @extend .col-3

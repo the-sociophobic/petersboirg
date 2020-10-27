@@ -1,8 +1,10 @@
 $default-col-length: 177px;
 $default-off-length: 15px;
 
-$col-len: calc(#{$default-col-length} / 1920px * 100%);
-$off-len: calc(#{$default-off-length} / 1920px * 100%);
+// $col-len: calc(#{$default-col-length} / 1920px * 100%);
+// $off-len: calc(#{$default-off-length} / 1920px * 100%);
+$col-len: calc(177 / 1920 * 100%);
+$off-len: calc(15 / 1920 * 100%);
 
 
 // BOOTSTRAP VARS
@@ -19,14 +21,14 @@ $grid-breakpoints: (
   // Large screen / desktop
   lg: 992px,
   // Extra large screen / wide desktop
-  // xl: 1200px
-  xl: 1800px
+  xl: 1200px
+  // xl: 1800px
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  // xl: 1140px
-  xl: 1743px
+  xl: 1140px
+  // xl: 1743px
 );
