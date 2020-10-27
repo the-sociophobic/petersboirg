@@ -58,6 +58,7 @@ $breakpoint-1024: 1024px
 
 *
   font-family: 'Spectral', sans-serif
+  letter-spacing: -.2px
   margin: 0
   box-sizing: border-box
   // @extend .noselect
@@ -65,14 +66,16 @@ $breakpoint-1024: 1024px
 
 html, body, #root, .App
   width: 100%
-  height: 100%
+  min-height: 100%
 .App
   @extend .d-flex
   @extend .flex-column
   color: $font-color
   background-color: $background-color
+  overflow-x: hidden
   .content
-    flex: auto
+    // flex: auto
+    // flex-grow: 2
 
 
 
@@ -89,7 +92,15 @@ html, body, #root, .App
     font-family: 'Futura New', sans-serif
     font-size: 24px
     padding-left: $padding
-    &--active
+    position: relative
+    &--active::after
+      content: ''
+      position: absolute
+      top: 35%
+      left: $padding
+      width: 25%
+      height: 2px
+      background-color: $dark
   &__lang
     @extend .col-2
     border-right: $border
@@ -188,3 +199,62 @@ html, body, #root, .App
           height: 68px
           img
             height: 100%
+
+
+
+
+.main
+  border-right: $border
+  border-bottom: $border
+  border-left: $border
+  &__background
+    @extend .col-8
+    clip-path: circle(60% at 50% 105%)
+    margin-top: -7%
+  &__name
+    @extend .col-9
+    @extend .text-center
+    font-family: 'Futura New', sans-serif
+    font-size: 41px
+    line-height: 130px
+    margin-bottom: 90px
+    &::after
+      @extend .col-3
+      height: 2px
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      background-color: $dark
+  &__description
+    @extend .col-7
+    @extend .text-center
+    font-size: 82px
+    margin-bottom: 177px
+    font-weight: 400
+    position: relative
+  &__quote
+    @extend .col-1
+    font-size: 387px
+    &--left
+      transform: rotate(180deg) translateY(30%)
+    &--right
+  &__tagline
+    @extend .col-9
+    @extend .text-center
+    font-family: 'Futura New', sans-serif
+    font-weight: 600
+    font-size: 36px
+    line-height: 84px
+    margin-bottom: 87px
+    position: relative
+    &::after
+      @extend .col-3
+      height: 2px
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      background-color: $dark

@@ -29,9 +29,9 @@ export default {
   },
 
   Main: {
-    name: ["", "", ""],
-    description: ["", "", ""],
-    tagline: ["", "", ""],
+    name: ["Бюро Petersbourg voyages & events", "Bureau Petersbourg voyages & events", "Bureau Petersbourg voyages & events"],
+    description: ["Создаем мероприятия и события\nв сочетании лучших традиций\nи новаторских решений", "Agence spécialisée dans l’organisation d’évènement d’entreprise, en Russie\nVotre partenaire aux compétences\nmulticulturelles", "Agency dedicated to the organization\nof corporate events, in Russia\nYour partner\nwith multicultural approach"],
+    tagline: ["Европейский подход", "Une équipe franco-russe pour répondre aux exigences du marché francophone", "Russian and European teams to meet requests of the international market"],
   },
   
   Activities: {},

@@ -33,6 +33,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount = () => {
+    console.log(arrayToLocale(flatten(messages))[this.state.lang])
   }
 
   render = () =>
