@@ -44,12 +44,18 @@ export default class App extends React.Component {
       <div className="App">
         <div className="container">
           <Header
+            page={this.state.page}
+            lang={this.state.lang}
             setPage={page => this.setState({page: page})}
             setLang={lang => this.setState({lang: lang})}
           />
-          {(Page =>
-            <Page />
-          )(pages[this.state.page])}
+        </div>
+        <div className="content">
+          <div className="container">
+            {(Page =>
+              <Page />
+            )(pages[this.state.page])}
+          </div>
         </div>
         <Footer />
       </div> 

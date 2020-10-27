@@ -1,13 +1,19 @@
 
+@import './grid.scss'
 @import '~bootstrap/scss/bootstrap.scss'
 @import './variables.css'
-@import './grid.scss'
 
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@1,300;1,500;1,600&display=swap')
   
-// @font-face
-//   font-family: 'Montserrat'
-//   src: url('./fonts/Montserrat/Montserrat-Regular.ttf') format('truetype')
+@font-face
+  font-family: 'Futura New'
+  src: url('./fonts/Futura New/FuturaNewBook-Reg.ttf') format('truetype')
+  font-weight: normal
+
+@font-face
+  font-family: 'Futura New'
+  src: url('./fonts/Futura New/FuturaNewDemi-Reg.ttf') format('truetype')
+  font-weight: bold
 
 
 
@@ -18,6 +24,10 @@ $main: #F14421
 
 $font-color: $dark
 $background-color: $light
+
+$border: 2px solid $main
+$padding: 1.5em
+
 
 $some-var: var(--some-var)
 
@@ -53,14 +63,128 @@ $breakpoint-1024: 1024px
   // @extend .noselect
   // overflow: hidden
 
-.App
+html, body, #root, .App
   width: 100%
   height: 100%
-  overflow-y: scroll
+.App
   @extend .d-flex
   @extend .flex-column
-  @extend .justify-content-around
   color: $font-color
   background-color: $background-color
+  .content
+    flex: auto
 
 
+
+
+.header
+  @extend .row
+  height: 116px
+  border: $border
+  &__item
+    @extend .col-1
+    @extend .d-flex
+    @extend .align-items-center
+    border-right: $border
+    font-family: 'Futura New', sans-serif
+    font-size: 24px
+    padding-left: $padding
+    &--active
+  &__lang
+    @extend .col-2
+    border-right: $border
+    @extend .d-flex
+    @extend .flex-row
+    @extend .justify-content-around
+    @extend .align-items-center
+    &__item
+      font-size: 37px
+      cursor: pointer
+      &--active
+        color: $main
+  &__logo
+    @extend .col-3
+    @extend .d-flex
+    @extend .justify-content-center
+    @extend .align-items-center
+    img
+      width: 70%
+
+
+  
+
+.footer
+  &__top
+    @extend .container
+    color: $main
+    margin-bottom: 16px
+    &__agenda
+      @extend .d-flex
+      @extend .flex-column
+      @extend .justify-content-center
+      @extend .align-items-center
+      font-family: 'Futura New', sans-serif
+      font-size: 46px
+      line-height: 84px
+      margin: 6px 0 20px
+      img
+    &__projects
+      border-top: $border
+      height: 200px
+      @extend .row
+      &__item
+        @extend .col-3
+        @extend .d-flex
+        @extend .flex-column
+        @extend .justify-content-center
+        &:not(:last-child)
+          border-right: $border
+        &__name
+          font-size: 39px
+          font-weight: 500
+        &__place
+          font-size: 29px
+          font-weight: 300
+          text-align: right
+        &:nth-of-type(1) &__place
+          padding-right: $padding
+        &:nth-of-type(2) &__name
+          padding-left: $padding
+        &:nth-of-type(2) &__place
+          padding-right: $padding * 2
+        &:nth-of-type(3) &__name
+          padding-left: $padding * 2
+  &__down
+    background-color: $dark
+    color: $footer-light
+    font-size: 36px
+    padding-bottom: 63px
+    &__text
+      @extend .row
+      padding: 71px 0
+      &__address
+        @extend .col-6
+        font-family: 'Futura New', sans-serif
+        b
+          font-family: 'Futura New', sans-serif
+      &__email
+        @extend .col-3
+        @extend .text-center
+        a
+          color: $footer-light
+    &__logos
+      @extend .row
+      &__partners
+        @extend .col-6
+        @extend .d-flex
+        @extend .justify-content-between
+        @extend .align-items-center
+      &__social
+        @extend .col-3
+        @extend .d-flex
+        @extend .justify-content-end
+        &__item
+          margin-left: 68px
+          height: 68px
+          img
+            height: 100%

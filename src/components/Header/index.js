@@ -1,6 +1,7 @@
 import React from 'react'
-
 import { FormattedMessage } from 'react-intl'
+
+import logo from './logo.svg'
 
 
 export default class Header extends React.Component {
@@ -32,5 +33,12 @@ export default class Header extends React.Component {
           <FormattedMessage id={`Header.${link}`} />
         </div>
       )}
+      {this.renderLang()}
+      <div
+        className="header__logo"
+        onClick={() => this.props.setPage("Main")}
+      >
+        <img src={logo} />
+      </div>
     </div>
 }
