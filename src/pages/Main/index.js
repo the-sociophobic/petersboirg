@@ -1,15 +1,20 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+
+import { FormattedMessage } from 'components/Store'
+import Img from 'components/Img'
 
 import background from './background.jpg'
 
 
-export default class extends React.Component {
+export default class Main extends React.Component {
   render = () =>
     <div className="main">
       <div className="row d-flex justify-content-center">
         <div className="main__background">
-          <img src={background} />
+          <Img src={background} />
+          {/* <div className="main__background__container">
+            <iframe src="https://www.youtube.com/embed/VxP1zavsTtU?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=VxP1zavsTtU&amp;mute=1" frameborder="0" allow="autoplay" id="widget2"/>
+          </div> */}
         </div>
       </div>
       <div className="row d-flex justify-content-center">

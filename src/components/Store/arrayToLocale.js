@@ -1,7 +1,7 @@
 import _ from 'lodash'
 
 
-export default obj => {
+const arrayToLocale =  obj => {
   var result = {}
 
   result.ru = {}
@@ -17,3 +17,6 @@ export default obj => {
 
   return result
 }
+
+
+export default arrayToLocale

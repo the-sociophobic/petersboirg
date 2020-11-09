@@ -1,4 +1,4 @@
-export default {
+const defaultMessages = {
   Header: {
     Main: ["главная", "accueil", "main"],
     Activities: ["продукты", "activités", "activities"],
@@ -26,6 +26,13 @@ export default {
     officeSPbAddress: ["190031 Санкт-Петербург, ул. Малая Морская, 18", "190031 Russie, Saint Pétersbourg, Malaya Morskaya ulitsa, 18", "190000 Russie, Saint Petersburg, Malaya Morskaya ulitsa, 18"],
     officeLyon: ["Представительство в Лионе", "Bureau Lyon", "Office Lyon"],
     officeLyonAddress: ["Rachel Guironnet", "Rachel Guironnet", "Rachel Guironnet"],
+
+    links: {
+      tourist: ["https://saintpetersburgcb.com/about/", "https://saintpetersburgcb.com/en/", "https://saintpetersburgcb.com/en/"],
+      russia: ["http://russiacb.com/", "http://russiacb.com/en/", "http://russiacb.com/en/"],
+      inst: ["https://www.instagram.com/spb_city_guide/", "https://www.instagram.com/petersbourgvoyages/?hl=ru", "https://www.instagram.com/spb_city_guide/"],
+      fb: ["https://www.facebook.com/spbcitygroup/", "https://www.facebook.com/petersbourgloisir", "https://www.facebook.com/spbcitygroup/"],
+    }
   },
 
   Main: {
@@ -41,3 +48,6 @@ export default {
   Contact: {},
 
 }
+
+
+export default defaultMessages

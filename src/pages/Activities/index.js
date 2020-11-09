@@ -1,7 +1,9 @@
 import React from 'react'
 
+import Folder from 'components/Folder'
 
-export default class extends React.Component {
+
+export default class Activities extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -9,5 +11,6 @@ export default class extends React.Component {
 
   render = () =>
     <div className="container">
+      <Folder />
    </div>
 }

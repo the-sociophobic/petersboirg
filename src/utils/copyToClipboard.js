@@ -1,4 +1,4 @@
-export default str => {
+const copyToClipboard = str => {
   const el = document.createElement('textarea')
   // el.style.display = "none"
   el.value = str
@@ -7,3 +7,6 @@ export default str => {
   document.execCommand('copy')
   document.body.removeChild(el)
 }
+
+
+export default copyToClipboard

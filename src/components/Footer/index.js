@@ -1,7 +1,12 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
 
+import {
+  FormattedMessage,
+  StoreContext,
+  getMessage
+} from 'components/Store'
 import ExternalLink from 'components/ExternalLink'
+import Img from 'components/Img'
 
 import arrow from './arrow.svg'
 
@@ -17,17 +22,22 @@ import fb from './social/fb.svg'
 
 
 export default class Footer extends React.Component {
+  static contextType = StoreContext
+
   render = () =>
     <div className="footer">
       <div className="footer__top">
         <div className="footer__top__agenda">
           <FormattedMessage id="Footer.agenda" />
-          <img src={arrow} />
+          <Img src={arrow} />
         </div>
         <div className="footer__top__projects">
           {["graduation", "pure", "IFTM"]
             .map(project =>
-              <div className="footer__top__projects__item">
+              <div
+                key={project}
+                className="footer__top__projects__item"
+              >
                 <div className="footer__top__projects__item__name">
                   <FormattedMessage id={`Footer.projects.${project}.name`} />
                 </div>
@@ -66,11 +76,11 @@ export default class Footer extends React.Component {
               {[
                 {
                   logo: tourist,
-                  url: "",
+                  url: getMessage(this, "Footer.links.tourist"),
                 },
                 {
                   logo: russia,
-                  url: "",
+                  url: getMessage(this, "Footer.links.russia"),
                 },
                 {
                   logo: petersboirg,
@@ -80,12 +90,13 @@ export default class Footer extends React.Component {
                   logo: eco,
                   url: "",
                 },
-              ].map(logo =>
+              ].map((logo, index) =>
                 <ExternalLink
+                  key={index}
                   to={logo.url}
                   className="footer__down__logos__partners__item"
                 >
-                  <img src={logo.logo} />
+                  <Img src={logo.logo} />
                 </ExternalLink>
               )}
             </div>
@@ -93,11 +104,11 @@ export default class Footer extends React.Component {
               {[
                 {
                   logo: inst,
-                  url: "",
+                  url: getMessage(this, "Footer.links.inst"),
                 },
                 {
                   logo: yt,
-                  url: "",
+                  url: "https://www.youtube.com/channel/UC86fsRjjxxbFUNwNlZQsCjA/featured",
                 },
                 {
                   logo: linkedin,
@@ -105,14 +116,15 @@ export default class Footer extends React.Component {
                 },
                 {
                   logo: fb,
-                  url: "",
+                  url: getMessage(this, "Footer.links.fb"),
                 },
-              ].map(logo =>
+              ].map((logo, index) =>
                 <ExternalLink
+                  key={index}
                   to={logo.url}
                   className="footer__down__logos__social__item"
                 >
-                  <img src={logo.logo} />
+                  <Img src={logo.logo} />
                 </ExternalLink>
               )}
             </div>

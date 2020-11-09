@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default props =>
+const ExternalLink = props =>
   <a
     className={`lev-link ${props.className}`}
     href={props.to}
@@ -11,3 +11,6 @@ export default props =>
   >
     {props.children}
   </a>
+
+
+export default ExternalLink

@@ -1,4 +1,4 @@
-export default () => {
+const isTouchDevice = () => {
   try {  
     document.createEvent("TouchEvent")  
     return true  
@@ -6,3 +6,6 @@ export default () => {
     return false  
   }  
 }
+
+
+export default isTouchDevice

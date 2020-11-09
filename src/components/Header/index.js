@@ -1,5 +1,10 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+
+import {
+  FormattedMessage,
+  StoreContext
+} from 'components/Store'
+import Img from 'components/Img'
 
 import logo from './logo.svg'
 
@@ -10,13 +15,16 @@ export default class Header extends React.Component {
     this.state = {}
   }
 
+  static contextType = StoreContext
+
   renderLang = () =>
     <div className="header__lang">
       {["en", "fr", "ru"]
         .map(lang =>
           <div
-            className={`header__lang__item ${lang === this.props.lang && "header__lang__item--active"}`}
-            onClick={() => this.props.setLang(lang)}
+            key={lang}
+            className={`header__lang__item ${lang === this.context.locale && "header__lang__item--active"}`}
+            onClick={() => this.context.setLocale(lang)}
           >
             {lang}
           </div>
@@ -25,20 +33,23 @@ export default class Header extends React.Component {
 
   render = () =>
     <div className="header">
-      {["Main", "Activities", "Agency", "Contact"].map(link =>
+      <div className="header__fixed-content">
+        {["Main", "Activities", "Agency", "Contact"].map(link =>
+          <div
+            key={link}
+            className={`header__item ${this.props.page === link && "header__item--active"}`}
+            onClick={() => this.props.setPage(link)}
+          >
+            <FormattedMessage id={`Header.${link}`} />
+          </div>
+        )}
+        {this.renderLang()}
         <div
-          className={`header__item ${this.props.page === link && "header__item--active"}`}
-          onClick={() => this.props.setPage(link)}
+          className="header__logo"
+          onClick={() => this.props.setPage("Main")}
         >
-          <FormattedMessage id={`Header.${link}`} />
+          <Img src={logo} />
         </div>
-      )}
-      {this.renderLang()}
-      <div
-        className="header__logo"
-        onClick={() => this.props.setPage("Main")}
-      >
-        <img src={logo} />
       </div>
     </div>
 }
