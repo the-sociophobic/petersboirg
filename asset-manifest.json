@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/petersboirg/static/css/main.fae86cd5.chunk.css",
-    "main.js": "/petersboirg/static/js/main.b29bd013.chunk.js",
-    "main.js.map": "/petersboirg/static/js/main.b29bd013.chunk.js.map",
+    "main.css": "/petersboirg/static/css/main.246a9c06.chunk.css",
+    "main.js": "/petersboirg/static/js/main.f658860f.chunk.js",
+    "main.js.map": "/petersboirg/static/js/main.f658860f.chunk.js.map",
     "runtime-main.js": "/petersboirg/static/js/runtime-main.88192d38.js",
     "runtime-main.js.map": "/petersboirg/static/js/runtime-main.88192d38.js.map",
-    "static/js/2.e43ef922.chunk.js": "/petersboirg/static/js/2.e43ef922.chunk.js",
-    "static/js/2.e43ef922.chunk.js.map": "/petersboirg/static/js/2.e43ef922.chunk.js.map",
+    "static/js/2.bf61b672.chunk.js": "/petersboirg/static/js/2.bf61b672.chunk.js",
+    "static/js/2.bf61b672.chunk.js.map": "/petersboirg/static/js/2.bf61b672.chunk.js.map",
     "index.html": "/petersboirg/index.html",
-    "static/css/main.fae86cd5.chunk.css.map": "/petersboirg/static/css/main.fae86cd5.chunk.css.map",
-    "static/js/2.e43ef922.chunk.js.LICENSE.txt": "/petersboirg/static/js/2.e43ef922.chunk.js.LICENSE.txt",
+    "static/css/main.246a9c06.chunk.css.map": "/petersboirg/static/css/main.246a9c06.chunk.css.map",
+    "static/js/2.bf61b672.chunk.js.LICENSE.txt": "/petersboirg/static/js/2.bf61b672.chunk.js.LICENSE.txt",
     "static/media/index.sass": "/petersboirg/static/media/FuturaNewDemi-Reg.0415068b.ttf",
     "static/media/arrow.530de3a9.svg": "/petersboirg/static/media/arrow.530de3a9.svg",
     "static/media/background.b9d9bd2c.jpg": "/petersboirg/static/media/background.b9d9bd2c.jpg",
@@ -25,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.88192d38.js",
-    "static/js/2.e43ef922.chunk.js",
-    "static/css/main.fae86cd5.chunk.css",
-    "static/js/main.b29bd013.chunk.js"
+    "static/js/2.bf61b672.chunk.js",
+    "static/css/main.246a9c06.chunk.css",
+    "static/js/main.f658860f.chunk.js"
   ]
 }
