@@ -6,7 +6,7 @@ import {
 } from 'components/Store'
 import Img from 'components/Img'
 
-import logo from './logo.svg'
+// import logo from './logo.svg'
 
 
 export default class Header extends React.Component {
@@ -48,7 +48,7 @@ export default class Header extends React.Component {
           className="header__logo"
           onClick={() => this.props.setPage("Main")}
         >
-          <Img src={logo} />
+          <Img src="Header/logo.svg" />
         </div>
       </div>
     </div>

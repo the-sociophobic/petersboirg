@@ -21,11 +21,13 @@ $dark: #0C293B
 $light: #E0D5CD
 $footer-light: #E8E2DC
 $main: #F14421
+$second: #ACA097
 
 $font-color: $dark
 $background-color: $light
 
-$border: 2px solid $main
+$border-width: 2px
+$border: $border-width solid $main
 $padding: 1.5em
 
 
@@ -256,7 +258,7 @@ html, body, #root, .App
       width: 100%
     &__container
       width: 100%
-      padding-top: calc(1080 / 1920 * 100%)
+      // padding-top: calc(1080 / 1920 * 100%)
       position: relative
       overflow: hidden
     iframe
@@ -273,8 +275,6 @@ html, body, #root, .App
     font-size: calc(41em / 33)
     // line-height: 130px
     line-height: calc(130em / 33)
-    // margin-bottom: 90px
-    margin-bottom: calc(90em / 33)
     &::after
       @extend .col-3
       height: 2px
@@ -284,73 +284,213 @@ html, body, #root, .App
       left: 50%
       transform: translateX(-50%)
       background-color: $dark
-  &__description
+
+
+
+
+
+.quotes
+  // @extend .row
+  margin-top: calc(230em / 33)
+  margin-bottom: calc(87em / 33)
+  &__row
+    @extend .row
+    margin-bottom: calc(100em / 33)
+  &__content
     @extend .col-7
-    @extend .text-center
+    padding-left: $off-len
+    padding-right: $off-len
     font-size: calc(82em / 33)
     // margin-bottom: calc(177em / 30)
-    margin-bottom: calc(100em / 33)
     font-weight: 400
     position: relative
-  &__quote
+    .main &
+      @extend .text-center
+  &__item
+    padding-left: $off-len
+    padding-right: $off-len
     @extend .col-1
     font-size: calc(387em / 33)
     &--left
       transform: rotate(180deg) translateY(40%)
     &--right
-  &__tagline
-    @extend .col-9
-    @extend .text-center
-    font-family: 'Futura New', sans-serif
-    font-weight: 600
-    font-size: calc(41em / 33)
-    line-height: calc(84em / 33)
-    margin-bottom: calc(87em / 33)
-    position: relative
-    &::after
+  &__line-container
+    @extend .row
+    width: 100%
+    .main &
+      @extend .justify-content-center
+  &__line
+    content: ''
+    height: 2px
+    background-color: $dark
+    @extend .col-4
+    .main &
       @extend .col-3
-      height: 2px
-      content: ''
-      position: absolute
-      top: 0
-      left: 50%
-      transform: translateX(-50%)
-      background-color: $dark
-
-
-
-
-
-
-
-
-
-
+  &__author
+    @extend .row
+    width: 100%
+    font-family: 'Futura New', sans-serif
+    *
+      font-family: 'Futura New', sans-serif
+    .main &
+      font-size: calc(41em / 33)
+      font-weight: 600
+      line-height: calc(84em / 33)
+      @extend .text-center
+    .activities &
+      font-size: calc(36em / 33)
+      line-height: 1.1
+      margin-top: calc(18em / 33)
 
 .folder
+  width: 100%
+  @extend .d-flex
+  @extend .flex-column
+  margin-top: calc(87em / 33)
+  &__tabs
+    width: 100%
+    @extend .d-flex
+    @extend .flex-row
+    margin-bottom: -1px
+    &__item
+      font-family: 'Futura New'
+      font-size: calc(46em / 33)
+      line-height: calc(87em / 33)
+      // padding-bottom: calc(87em / 33)
+      // margin-bottom: calc(-87em / 33)
+      color: $second
+      position: relative
+      @extend .col-2
+      @extend .text-center
+      // padding-left: calc(70em / 33)
+      // padding-right: calc(70em / 33)
+      margin-right: calc(-20em / 33)
+      border-top-left-radius: 100px
+      border-top-right-radius: 100px
+      border-top: $border
+      border-left: $border
+      border-right: $border
+      background-color: $light
+      z-index: 10
+      cursor: pointer !important
+      &--active
+        color: $main
+        z-index: 20
+  &__content
+    width: 100%
+    border: $border
+    position: relative
+    z-index: 15
 
 $dropdown-transition: .3s
 .dropdown
   width: 100%
   border-top: $border
-  border-bottom: $border
+  // border-bottom: $border
   @extend .d-flex
   @extend .flex-column
   &__title
     @extend .row
-    font-size: calc(80em / 33)
-    line-height: calc(208em / 33)
     cursor: pointer
-    left: 100%
-    transform: translateX(-100%)
-    transition: left $dropdown-transition, transform $dropdown-transition
-    .dropdown--opened &
-      left: 0%
-      transform: translateX(0%)
+    padding-left: $off-len
+    padding-right: $off-len
+    &__text
+      display: inline-block
+      font-size: calc(80em / 33)
+      line-height: calc(100em / 33)
+      position: relative
+      left: 100%
+      transform: translate(-100%, 0)
+      transition: left $dropdown-transition, transform $dropdown-transition
+      .dropdown--opened &
+        left: 0%
+        transform: translateX(0%)
   &__content
     width: 100%
     overflow: hidden
     transition: height $dropdown-transition
     &__container
       width: 100%
-      display: table
+      @d-flex
+
+
+
+.section
+  width: 100%
+  padding-bottom: $off-len
+  &__row-0, &__row-1, &__row-final
+  &__row-0, &__row-1
+    @extend .row
+    @extend .d-flex
+    @extend .align-content-stretch
+    margin-bottom: calc(#{$col-len} / 2)
+    &__img
+      img
+        width: 100%
+    &__paragraph
+      padding-right: $off-len
+      @extend .d-flex
+      @extend .flex-column
+      @extend .justify-content-between
+      &__tagline
+        font-family: 'Futura New'
+        color: $dark
+        font-size: calc(30em / 33)
+        font-weight: bold
+        display: block
+        padding-top: calc(30em / 33)
+        padding-bottom: calc(30em / 33)
+        margin-bottom: calc(60em / 33)
+        border-top: $border-width solid $dark
+        border-bottom: $border-width solid $dark
+      &__text
+        color: $main
+        font-size: calc(30em / 33)
+        position: relative
+        bottom: 0
+        display: block
+  &__row-0
+    &__img
+      @extend .col-3
+      margin-left: calc(#{$col-len} / 2)
+      margin-right: calc(#{$col-len} / 2)
+    &__paragraph
+      @extend .col-5
+      margin-left: -5px
+      margin-right: -5px
+  &__row-1
+    &__paragraph
+      @extend .col-3
+      margin-left: calc(#{$col-len} / 2)
+      margin-right: calc(#{$col-len} / 2)
+    &__img
+      padding-right: $off-len
+      margin-left: -5px
+      margin-right: -5px
+      @extend .col-5
+  &__row-final
+    @extend .row
+    padding-left: calc(#{$col-len} / 2)
+    padding-right: $off-len
+    img
+      width: 100%
+
+
+
+.video
+  width: 100%
+  padding-top: calc(100% / 1920 * 1080)
+  position: relative
+  &__iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+
+
+.events
+
+.trips
+

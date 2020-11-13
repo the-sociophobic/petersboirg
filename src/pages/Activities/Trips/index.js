@@ -1,13 +1,14 @@
 import React from 'react'
 
+import FolderTabContents from 'components/FolderTabContents'
 
-export default class Trips extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
 
+export default class Events extends React.Component {
   render = () =>
-    <div className="container">
-   </div>
+    <div className="trips">
+      <FolderTabContents
+        tab="Trips"
+        sections={["IncentiveTour", "SeminarTour", "PressTour", "ProductLaunch", "VIPTour"]}
+      />
+    </div>
 }

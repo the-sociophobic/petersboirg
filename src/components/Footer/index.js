@@ -8,17 +8,17 @@ import {
 import ExternalLink from 'components/ExternalLink'
 import Img from 'components/Img'
 
-import arrow from './arrow.svg'
+// import arrow from './arrow.svg'
 
-import tourist from './logos/tourist.svg'
-import russia from './logos/russia.svg'
-import petersboirg from './logos/petersboirg.svg'
-import eco from './logos/eco.svg'
+// import tourist from './logos/tourist.svg'
+// import russia from './logos/russia.svg'
+// import petersboirg from './logos/petersboirg.svg'
+// import eco from './logos/eco.svg'
 
-import inst from './social/inst.svg'
-import yt from './social/yt.svg'
-import linkedin from './social/linkedin.svg'
-import fb from './social/fb.svg'
+// import inst from './social/inst.svg'
+// import yt from './social/yt.svg'
+// import linkedin from './social/linkedin.svg'
+// import fb from './social/fb.svg'
 
 
 export default class Footer extends React.Component {
@@ -29,7 +29,7 @@ export default class Footer extends React.Component {
       <div className="footer__top">
         <div className="footer__top__agenda">
           <FormattedMessage id="Footer.agenda" />
-          <Img src={arrow} />
+          <Img src='Footer/arrow.svg' />
         </div>
         <div className="footer__top__projects">
           {["graduation", "pure", "IFTM"]
@@ -75,19 +75,19 @@ export default class Footer extends React.Component {
             <div className="footer__down__logos__partners">
               {[
                 {
-                  logo: tourist,
+                  logo: 'Footer/logos/tourist.svg',
                   url: getMessage(this, "Footer.links.tourist"),
                 },
                 {
-                  logo: russia,
+                  logo: 'Footer/logos/russia.svg',
                   url: getMessage(this, "Footer.links.russia"),
                 },
                 {
-                  logo: petersboirg,
+                  logo: 'Footer/logos/petersboirg.svg',
                   url: "",
                 },
                 {
-                  logo: eco,
+                  logo: 'Footer/logos/eco.svg',
                   url: "",
                 },
               ].map((logo, index) =>
@@ -103,19 +103,19 @@ export default class Footer extends React.Component {
             <div className="footer__down__logos__social">
               {[
                 {
-                  logo: inst,
+                  logo: 'Footer/social/inst.svg',
                   url: getMessage(this, "Footer.links.inst"),
                 },
                 {
-                  logo: yt,
+                  logo: 'Footer/social/yt.svg',
                   url: "https://www.youtube.com/channel/UC86fsRjjxxbFUNwNlZQsCjA/featured",
                 },
                 {
-                  logo: linkedin,
+                  logo: 'Footer/social/linkedin.svg',
                   url: "",
                 },
                 {
-                  logo: fb,
+                  logo: 'Footer/social/fb.svg',
                   url: getMessage(this, "Footer.links.fb"),
                 },
               ].map((logo, index) =>

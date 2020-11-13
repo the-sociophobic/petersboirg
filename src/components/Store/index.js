@@ -31,7 +31,7 @@ class StoreProvider extends React.Component {
 }
 
 const getMessage = (_this, id) =>
-  _this.context.messages[id]
+  _this.context.messages[id] || ""
 
 class FormattedMessage extends React.Component {
   static contextType = StoreContext
