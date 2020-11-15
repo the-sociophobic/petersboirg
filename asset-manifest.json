@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/petersboirg/static/css/main.f0033720.chunk.css",
-    "main.js": "/petersboirg/static/js/main.4d00259d.chunk.js",
-    "main.js.map": "/petersboirg/static/js/main.4d00259d.chunk.js.map",
+    "main.js": "/petersboirg/static/js/main.d2503645.chunk.js",
+    "main.js.map": "/petersboirg/static/js/main.d2503645.chunk.js.map",
     "runtime-main.js": "/petersboirg/static/js/runtime-main.88192d38.js",
     "runtime-main.js.map": "/petersboirg/static/js/runtime-main.88192d38.js.map",
     "static/js/2.32564d75.chunk.js": "/petersboirg/static/js/2.32564d75.chunk.js",
@@ -41,6 +41,6 @@
     "static/js/runtime-main.88192d38.js",
     "static/js/2.32564d75.chunk.js",
     "static/css/main.f0033720.chunk.css",
-    "static/js/main.4d00259d.chunk.js"
+    "static/js/main.d2503645.chunk.js"
   ]
 }
