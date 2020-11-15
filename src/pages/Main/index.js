@@ -4,8 +4,6 @@ import { FormattedMessage } from 'components/Store'
 import Quotes from 'components/Quotes'
 import Video from 'components/Video'
 
-// import background from './background.jpg'
-
 
 export default class Main extends React.Component {
   render = () =>

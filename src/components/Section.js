@@ -2,6 +2,7 @@ import React from 'react'
 
 import Img from 'components/Img'
 import Video from 'components/Video'
+import addNewLines from 'utils/addNewLines'
 
 
 const Section = props =>
@@ -12,10 +13,10 @@ const Section = props =>
       </div>
       <div className="section__row-0__paragraph">
         <div className="section__row-0__paragraph__tagline">
-          {props.tagline}
+          {addNewLines(props.tagline)}
         </div>
         <div className="section__row-0__paragraph__text">
-          {props.text0}
+          {addNewLines(props.text0)}
         </div>
       </div>
     </div>
@@ -23,7 +24,7 @@ const Section = props =>
       <div className="section__row-1">
         <div className="section__row-1__paragraph">
           <div className="section__row-1__paragraph__text">
-            {props.text1}
+            {addNewLines(props.text1)}
           </div>
         </div>
         <div className="section__row-1__img">

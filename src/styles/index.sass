@@ -292,10 +292,10 @@ html, body, #root, .App
 .quotes
   // @extend .row
   margin-top: calc(230em / 33)
-  margin-bottom: calc(87em / 33)
+  margin-bottom: calc(87rem / 33)
   &__row
     @extend .row
-    margin-bottom: calc(100em / 33)
+    margin-bottom: calc(150rem / 33)
   &__content
     @extend .col-7
     padding-left: $off-len
@@ -310,10 +310,20 @@ html, body, #root, .App
     padding-left: $off-len
     padding-right: $off-len
     @extend .col-1
-    font-size: calc(387em / 33)
-    &--left
+    font-size: calc(350rem / 33)
+    position: relative
+    &__symbol
+      position: absolute
+      display: inline-block
+      line-height: 1
+    &--left &__symbol
       transform: rotate(180deg) translateY(40%)
-    &--right
+      top: 0
+      left: 0
+    &--right &__symbol
+      transform: translateY(40%)
+      bottom: 0
+      right: 0
   &__line-container
     @extend .row
     width: 100%
@@ -488,9 +498,92 @@ $dropdown-transition: .3s
     width: 100%
     height: 100%
 
+img.img
+  // width: 100%
 
 
-.events
 
-.trips
+.agency
+  border: $border
+  border-top: 0px
+  padding-top: 1px
+  padding-bottom: calc(90rem / 33)
+  .quotes
+    border-bottom: $border
+    padding-bottom: calc(70rem / 33)
+  img.img
+    width: 100%
+    margin-bottom: calc(30em / 33)
+  &__title
+    font-family: 'Futura New'
+    font-size: calc(36em / 33)
+    margin-bottom: calc(30em / 33)
+  &__text0, &__text2
+    font-size: calc(30em / 33)
+    margin-bottom: calc(90rem / 33)
+  &__text1
+    margin-bottom: calc(90rem / 33)
+    font-size: calc(82em / 33)
+    color: $main
+    position: relative
+    padding-top: calc(30rem / 33)
+    padding-bottom: calc(30rem / 33)
+    &::before, &::after
+      content: ''
+      position: absolute
+      width: calc(100% * 3 / 7)
+      height: 1px
+      background-color: $main
+      left: calc(100% * 2 / 7)
+    &::before
+      top: 0
+    &::after
+      bottom: 0
+      
 
+.contact
+  border: $border
+  border-top: 0px
+  &__item
+    @extend .row
+    @extend .align-items-end
+    padding-top: calc(60rem / 33)
+    padding-bottom: calc(60rem / 33)
+    border-bottom: $border
+    &__links
+      @extend .col-8
+      @extend .col-lg-4
+      a
+        color: $dark
+        font-size: calc(82rem / 33)
+        line-height: 1
+        font-weight: bold
+        display: inline-block
+        &:first-child
+          margin-bottom: calc(41rem / 33)
+    &__address
+      @extend .mt-4
+      color: $main
+      font-family: 'Futura New'
+      b
+        font-family: 'Futura New'
+      font-size: calc(30rem / 33)
+  &__social
+    @extend .col-3
+    &__item
+      width: 12.5%
+      margin-right: 12.5%
+      display: inline-block
+      img.img
+        width: 100%
+  &__button
+    @extend .col-3
+    &__item
+      width: 100%
+      border: 2px solid $dark
+      font-family: 'Futura New'
+      font-weight: bold
+      height: 100%
+      line-height: 200%
+      @extend .text-center
+      cursor: pointer

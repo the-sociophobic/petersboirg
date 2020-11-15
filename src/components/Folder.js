@@ -19,7 +19,7 @@ export default class Folder extends React.Component {
       <div className="folder__tabs">
         {this.props.data && this.props.data.map((tab, index) =>
           <div
-            key={tab.title}
+            key={index}
             className={`folder__tabs__item ${index === this.state.currentTab && "folder__tabs__item--active"}`}
             onClick={() => this.setState({currentTab: index})}
           >

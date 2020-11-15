@@ -8,18 +8,6 @@ import {
 import ExternalLink from 'components/ExternalLink'
 import Img from 'components/Img'
 
-// import arrow from './arrow.svg'
-
-// import tourist from './logos/tourist.svg'
-// import russia from './logos/russia.svg'
-// import petersboirg from './logos/petersboirg.svg'
-// import eco from './logos/eco.svg'
-
-// import inst from './social/inst.svg'
-// import yt from './social/yt.svg'
-// import linkedin from './social/linkedin.svg'
-// import fb from './social/fb.svg'
-
 
 export default class Footer extends React.Component {
   static contextType = StoreContext

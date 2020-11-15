@@ -9,6 +9,9 @@ export default class Img extends React.Component {
     this.props.src ?
       <img
         src={images(`./${this.props.src}`).default}
-        alt="" />
-      : ""
+        className={`img ${this.props.className}`}
+        alt=""
+      />
+      :
+      ""
 }

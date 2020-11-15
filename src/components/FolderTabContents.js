@@ -25,8 +25,9 @@ export default class FolderTabContents extends React.Component {
       </Quotes>
 
       {this.props.sections && this.props.sections
-        .map(section =>
+        .map((section, index) =>
           <Dropdown
+            key={index}
             title={<FormattedMessage id={`Activities.${this.props.tab}.${section}.title`} />}
           >
             <Section

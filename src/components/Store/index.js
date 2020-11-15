@@ -1,6 +1,7 @@
 import React from 'react'
 
 import flatten from 'utils/flatten'
+import addNewLines from 'utils/addNewLines'
 import arrayToLocale from './arrayToLocale'
 import defaultMessages from './defaultMessages'
 
@@ -37,7 +38,8 @@ class FormattedMessage extends React.Component {
   static contextType = StoreContext
 
   render = () =>
-    getMessage(this, this.props.id)
+    addNewLines(
+      getMessage(this, this.props.id))
 }
 
 export {
