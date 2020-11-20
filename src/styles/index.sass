@@ -63,6 +63,7 @@ $breakpoint-1024: 1024px
   letter-spacing: -.2px
   margin: 0
   box-sizing: border-box
+  font-style: italic
   // @extend .noselect
   // overflow: hidden
 
@@ -71,6 +72,7 @@ html, body, #root, .App
   min-height: 100%
   color: $font-color
   background-color: $background-color
+
 .App
   @extend .d-flex
   @extend .flex-column
@@ -91,12 +93,26 @@ html, body, #root, .App
 
 
 
+.container
+  width: 90% !important
+  max-width: none
+
+@media screen and ( min-width: 1800px )
+  html
+    font-size: 30px
+  
+
+
+.t-tildalabel, #tildacopy, .t-rec
+  @extend .d-none
+
+
 
 .header
   // height: 116px
-  height: calc(116em / 33)
+  height: calc(116rem / 33)
   &__fixed-content
-    height: calc(116em / 33)
+    height: calc(116rem / 33)
     position: fixed
     z-index: 100
     background-color: $light
@@ -106,27 +122,66 @@ html, body, #root, .App
     @extend .container
     @extend .row
     border: $border
-  &__item
-    @extend .col-1
+  &__nav
+    @extend .col-sm-4
+    @extend .col-6
     @extend .d-flex
-    @extend .align-items-center
+    @extend .flex-sm-row
+    @extend .flex-column
+    background-color: $light
+    @media screen and ( max-width: 576px )
+      border: $border
+      position: absolute
+      left: -$border-width
+      top: 100%
+    &:not(&--opened)
+      @media screen and ( max-width: 576px )
+        display: none !important
+    &__item
+      @extend .col
+      @extend .d-sm-flex
+      @extend .align-items-center
+      border-right: $border
+      font-family: 'Futura New', sans-serif
+      color: $dark !important
+      font-size: calc(24rem / 33)
+      @media screen and ( max-width: 576px )
+        font-size: calc(48rem / 33)
+        line-height: 3
+        border-right: 0
+      padding-left: $padding
+      position: relative
+      cursor: pointer
+      &--active::after
+        content: ''
+        position: absolute
+        top: 35%
+        left: $padding
+        width: 25%
+        height: 2px
+        background-color: $dark
+      &:hover
+        text-decoration: none !important
+  &__burger
+    @extend .d-sm-none
+    @extend .col-2
     border-right: $border
-    font-family: 'Futura New', sans-serif
-    // font-size: 24px
-    font-size: calc(24em / 33)
-    padding-left: $padding
     position: relative
-    cursor: pointer
-    &--active::after
+    &::before, &::after
       content: ''
       position: absolute
-      top: 35%
-      left: $padding
-      width: 25%
-      height: 2px
+      width: 50%
+      height: $border-width
       background-color: $dark
+      left: 25%
+      transform: translateY(-50%)
+    &::before
+      top: 40%
+    &::after
+      top: 60%
   &__lang
-    @extend .col-2
+    @extend .col-sm-2
+    @extend .col-3
     border-right: $border
     @extend .d-flex
     @extend .flex-row
@@ -134,12 +189,13 @@ html, body, #root, .App
     @extend .align-items-center
     &__item
       // font-size: 37px
-      font-size: calc(37em / 33)
+      font-size: calc(37rem / 33)
       cursor: pointer
       &--active
         color: $main
   &__logo
-    @extend .col-3
+    @extend .col-sm-3
+    @extend .col-4
     @extend .d-flex
     @extend .justify-content-center
     @extend .align-items-center
@@ -162,9 +218,9 @@ html, body, #root, .App
       @extend .align-items-center
       font-family: 'Futura New', sans-serif
       // font-size: 46px
-      font-size: calc(46em / 33)
+      font-size: calc(46rem / 33)
       // line-height: 84px
-      line-height: calc(84em / 33)
+      line-height: calc(84rem / 33)
       margin: 6px 0 20px
       img
     &__projects
@@ -172,18 +228,22 @@ html, body, #root, .App
       height: 200px
       @extend .row
       &__item
-        @extend .col-3
+        @extend .col-md-3
+        @extend .col-9
         @extend .d-flex
         @extend .flex-column
         @extend .justify-content-center
         &:not(:last-child)
-          border-right: $border
+          @media screen and ( min-width: 768px + 1px )
+            border-right: $border
+          @media screen and ( max-width: 768px )
+            border-bottom: $border
         &__name
           // font-size: 39px
-          font-size: calc(39em / 33)
+          font-size: calc(39rem / 33)
           font-weight: 500
         &__place
-          font-size: calc(29em / 33)
+          font-size: calc(29rem / 33)
           font-weight: 300
           text-align: right
         &:nth-of-type(1) &__place
@@ -197,49 +257,60 @@ html, body, #root, .App
   &__down
     background-color: $dark
     color: $footer-light
-    font-size: calc(36em / 33)
-    padding-bottom: 63px
+    font-size: calc(36rem / 33)
+    padding-bottom: calc(60rem / 33)
     &__text
       @extend .row
-      padding: 71px 0
+      @extend .py-4
       &__address
-        @extend .col-6
+        @extend .col-9
+        @extend .col-md-6
         font-family: 'Futura New', sans-serif
         b
           font-family: 'Futura New', sans-serif
       &__email
-        @extend .col-3
+        @extend .col-9
+        @extend .col-md-3
         @extend .text-center
         a
           color: $footer-light
     &__logos
       @extend .row
+      @extend .mt-5
       &__partners
-        @extend .col-6
+        @extend .col-9
+        @extend .col-lg-6
+        @extend .mb-5
+        @extend .mb-lg-0
         @extend .d-flex
+        @extend .flex-wrap
         @extend .justify-content-between
         @extend .align-items-center
         &__item
+          display: inline-block
+          @extend .mb-3
+          @extend .mb-lg-0
           img
             height: 100%
           &:nth-of-type(1)
-            // height: calc(66em / 33)
-            height: calc(66em / 33)
+            // height: calc(66rem / 33)
+            height: calc(66rem / 33)
           &:nth-of-type(2)
-            // height: calc(76em / 33)
-            height: calc(76em / 33)
+            // height: calc(76rem / 33)
+            height: calc(76rem / 33)
           &:nth-of-type(3), &:nth-of-type(4)
-            // height: calc(56em / 33)
-            height: calc(56em / 33)
+            // height: calc(56rem / 33)
+            height: calc(56rem / 33)
       &__social
-        @extend .col-3
+        @extend .col-7
+        @extend .col-lg-3
         @extend .d-flex
         @extend .justify-content-end
         &__item
           // margin-left: 62px
-          margin-left: calc(62em / 33)
+          margin-left: calc(62rem / 33)
           // height: 62px
-          height: calc(62em / 33)
+          height: calc(62rem / 33)
           img
             height: 100%
 
@@ -272,9 +343,9 @@ html, body, #root, .App
     @extend .text-center
     font-family: 'Futura New', sans-serif
     // font-size: 41px
-    font-size: calc(41em / 33)
+    font-size: calc(41rem / 33)
     // line-height: 130px
-    line-height: calc(130em / 33)
+    line-height: calc(130rem / 33)
     &::after
       @extend .col-3
       height: 2px
@@ -291,7 +362,7 @@ html, body, #root, .App
 
 .quotes
   // @extend .row
-  margin-top: calc(230em / 33)
+  margin-top: calc(230rem / 33)
   margin-bottom: calc(87rem / 33)
   &__row
     @extend .row
@@ -300,8 +371,10 @@ html, body, #root, .App
     @extend .col-7
     padding-left: $off-len
     padding-right: $off-len
-    font-size: calc(82em / 33)
-    // margin-bottom: calc(177em / 30)
+    font-size: calc(82rem / 33)
+    @media screen and ( max-width: 576px )
+      font-size: calc(60rem / 33)
+    // margin-bottom: calc(177rem / 30)
     font-weight: 400
     position: relative
     .main &
@@ -311,6 +384,8 @@ html, body, #root, .App
     padding-right: $off-len
     @extend .col-1
     font-size: calc(350rem / 33)
+    @media screen and ( max-width: 576px )
+      font-size: calc(250rem / 33)
     position: relative
     &__symbol
       position: absolute
@@ -343,38 +418,42 @@ html, body, #root, .App
     *
       font-family: 'Futura New', sans-serif
     .main &
-      font-size: calc(41em / 33)
+      font-size: calc(41rem / 33)
       font-weight: 600
-      line-height: calc(84em / 33)
+      line-height: calc(84rem / 33)
       @extend .text-center
     .activities &
-      font-size: calc(36em / 33)
+      font-size: calc(36rem / 33)
       line-height: 1.1
-      margin-top: calc(18em / 33)
+      margin-top: calc(18rem / 33)
 
 .folder
   width: 100%
   @extend .d-flex
   @extend .flex-column
-  margin-top: calc(87em / 33)
+  margin-top: calc(87rem / 33)
   &__tabs
     width: 100%
     @extend .d-flex
     @extend .flex-row
-    margin-bottom: -1px
+    margin-bottom: -2px
     &__item
       font-family: 'Futura New'
-      font-size: calc(46em / 33)
-      line-height: calc(87em / 33)
-      // padding-bottom: calc(87em / 33)
-      // margin-bottom: calc(-87em / 33)
+      font-size: calc(46rem / 33)
+      @media screen and ( max-width: 576px )
+        font-size: calc(36rem / 33)
+      line-height: calc(87rem / 33)
+      // padding-bottom: calc(87rem / 33)
+      // margin-bottom: calc(-87rem / 33)
       color: $second
       position: relative
-      @extend .col-2
+      @extend .col-lg-2
+      @extend .col-md-3
+      @extend .col-4
       @extend .text-center
-      // padding-left: calc(70em / 33)
-      // padding-right: calc(70em / 33)
-      margin-right: calc(-20em / 33)
+      // padding-left: calc(70rem / 33)
+      // padding-right: calc(70rem / 33)
+      margin-right: calc(-20rem / 33)
       border-top-left-radius: 100px
       border-top-right-radius: 100px
       border-top: $border
@@ -406,8 +485,12 @@ $dropdown-transition: .3s
     padding-right: $off-len
     &__text
       display: inline-block
-      font-size: calc(80em / 33)
-      line-height: calc(100em / 33)
+      font-size: calc(80rem / 33)
+      @media screen and ( max-width: 576px )
+        font-size: calc(36rem / 33)
+      line-height: 1.25
+      padding-top: calc(50rem / 33)
+      padding-bottom: calc(50rem / 33)
       position: relative
       left: 100%
       transform: translate(-100%, 0)
@@ -443,41 +526,59 @@ $dropdown-transition: .3s
       @extend .flex-column
       @extend .justify-content-between
       &__tagline
+        @extend .mt-sm-0
+        @extend .mt-4
         font-family: 'Futura New'
         color: $dark
-        font-size: calc(30em / 33)
+        font-size: calc(30rem / 33)
         font-weight: bold
         display: block
-        padding-top: calc(30em / 33)
-        padding-bottom: calc(30em / 33)
-        margin-bottom: calc(60em / 33)
+        padding-top: calc(30rem / 33)
+        padding-bottom: calc(30rem / 33)
+        margin-bottom: calc(60rem / 33)
         border-top: $border-width solid $dark
         border-bottom: $border-width solid $dark
       &__text
         color: $main
-        font-size: calc(30em / 33)
+        font-size: calc(30rem / 33)
         position: relative
         bottom: 0
         display: block
   &__row-0
     &__img
-      @extend .col-3
+      @extend .col-sm-3
+      @extend .col-7
+      @extend .pl-sm-0
+      @extend .pl-3
       margin-left: calc(#{$col-len} / 2)
       margin-right: calc(#{$col-len} / 2)
     &__paragraph
-      @extend .col-5
+      @extend .col-sm-5
+      @extend .col-7
+      @extend .pl-sm-0
+      @extend .pl-3
       margin-left: -5px
       margin-right: -5px
   &__row-1
     &__paragraph
-      @extend .col-3
+      @extend .col-sm-3
+      @extend .col-7
+      @extend .pl-sm-0
+      @extend .pl-3
+      @extend .order-sm-1
+      @extend .order-2
       margin-left: calc(#{$col-len} / 2)
       margin-right: calc(#{$col-len} / 2)
     &__img
+      @extend .col-sm-5
+      @extend .col-7
+      @extend .pl-sm-0
+      @extend .pl-3
+      @extend .order-sm-2
+      @extend .order-1
       padding-right: $off-len
       margin-left: -5px
       margin-right: -5px
-      @extend .col-5
   &__row-final
     @extend .row
     padding-left: calc(#{$col-len} / 2)
@@ -513,17 +614,19 @@ img.img
     padding-bottom: calc(70rem / 33)
   img.img
     width: 100%
-    margin-bottom: calc(30em / 33)
+    margin-bottom: calc(30rem / 33)
   &__title
     font-family: 'Futura New'
-    font-size: calc(36em / 33)
-    margin-bottom: calc(30em / 33)
+    font-size: calc(36rem / 33)
+    margin-bottom: calc(30rem / 33)
   &__text0, &__text2
-    font-size: calc(30em / 33)
+    font-size: calc(30rem / 33)
     margin-bottom: calc(90rem / 33)
   &__text1
     margin-bottom: calc(90rem / 33)
-    font-size: calc(82em / 33)
+    font-size: calc(82rem / 33)
+    @media screen and ( max-width: 576px )
+      font-size: calc(50rem / 33)
     color: $main
     position: relative
     padding-top: calc(30rem / 33)
@@ -556,12 +659,16 @@ img.img
       a
         color: $dark
         font-size: calc(82rem / 33)
+        @media screen and ( max-width: 576px )
+          font-size: calc(50rem / 33)
         line-height: 1
         font-weight: bold
         display: inline-block
         &:first-child
           margin-bottom: calc(41rem / 33)
     &__address
+      @extend .col-8
+      @extend .col-lg-4
       @extend .mt-4
       color: $main
       font-family: 'Futura New'
@@ -569,7 +676,10 @@ img.img
         font-family: 'Futura New'
       font-size: calc(30rem / 33)
   &__social
-    @extend .col-3
+    @extend .col-md-3
+    @extend .col-8
+    @extend .mb-md-0
+    @extend .mb-5
     &__item
       width: 12.5%
       margin-right: 12.5%
@@ -577,13 +687,21 @@ img.img
       img.img
         width: 100%
   &__button
-    @extend .col-3
+    @extend .col-md-3
+    @extend .col-7
     &__item
       width: 100%
       border: 2px solid $dark
-      font-family: 'Futura New'
-      font-weight: bold
       height: 100%
-      line-height: 200%
+      min-height: calc( 60rem / 33 )
       @extend .text-center
       cursor: pointer
+      &__text
+        font-family: 'Futura New'
+        font-size: calc( 30rem / 33 )
+        font-weight: bold
+        top: 50%
+        left: 50%
+        position: absolute
+        transform: translate(-50%, -50%)
+        white-space: nowrap

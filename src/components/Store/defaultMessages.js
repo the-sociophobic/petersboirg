@@ -1,9 +1,9 @@
 const defaultMessages = {
   Header: {
-    Main: ["главная", "accueil", "main"],
-    Activities: ["продукты", "activités", "activities"],
-    Agency: ["концепт", "agence", "agency"],
-    Contact: ["контакты", "contact", "contact"]
+    main: ["главная", "accueil", "main"],
+    activities: ["продукты", "activités", "activities"],
+    agency: ["концепт", "agence", "agency"],
+    contact: ["контакты", "contact", "contact"]
   },
 
   Footer: {

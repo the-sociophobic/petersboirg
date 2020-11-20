@@ -5,17 +5,59 @@ import {
   StoreContext
 } from 'components/Store'
 import Img from 'components/Img'
-
-// import logo from './logo.svg'
+import ExternalLink from 'components/ExternalLink'
+import isProd from 'utils/isProd'
 
 
 export default class Header extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+
+    this.state = {
+      navOpened: false
+    }
+
+    this.burgerRef = React.createRef()
+    this.navRef = React.createRef()
+
+    window.addEventListener('click', e =>
+      e.target !== this.burgerRef.current &&
+      e.target !== this.navRef.current &&
+        this.setState({ navOpened: false }))
   }
 
   static contextType = StoreContext
+
+  setPage = page => {
+    this.props.setPage(page)
+    this.setState({ navOpened: false })
+  }
+
+  renderNav = () =>
+    <div
+      ref={this.navRef}
+      className={`header__nav ${this.state.navOpened && "header__nav--opened"}`}
+    >
+      {["main", "activities", "agency", "contact"].map(link =>
+        isProd() && false ?
+          <ExternalLink
+            key={link}
+            to={`http://petersbourgevents.com/${link}`}
+            onClick={() => this.setPage(link)}
+            className={`header__nav__item ${this.props.page === link && "header__nav__item--active"}`}
+          >
+            <FormattedMessage id={`Header.${link}`} />
+          </ExternalLink>
+          :
+          <div
+            key={link}
+            className={`header__nav__item ${this.props.page === link && "header__nav__item--active"}`}
+            onClick={() => this.setPage(link)}
+          >
+            <FormattedMessage id={`Header.${link}`} />
+          </div>
+      )}
+    </div>
 
   renderLang = () =>
     <div className="header__lang">
@@ -34,22 +76,30 @@ export default class Header extends React.Component {
   render = () =>
     <div className="header">
       <div className="header__fixed-content">
-        {["Main", "Activities", "Agency", "Contact"].map(link =>
-          <div
-            key={link}
-            className={`header__item ${this.props.page === link && "header__item--active"}`}
-            onClick={() => this.props.setPage(link)}
-          >
-            <FormattedMessage id={`Header.${link}`} />
-          </div>
-        )}
-        {this.renderLang()}
         <div
-          className="header__logo"
-          onClick={() => this.props.setPage("Main")}
+          ref={this.burgerRef}
+          className="header__burger"
+          onClick={() => this.setState({ navOpened: !this.state.navOpened })}
         >
-          <Img src="Header/logo.svg" />
+
         </div>
+        {this.renderNav()}
+        {this.renderLang()}
+        {isProd() && false ?
+          <ExternalLink
+            className="header__logo"
+            to="http://petersbourgevents.com"
+          >
+            <Img src="Header/logo.svg" />          
+          </ExternalLink>
+          :
+          <div
+            className="header__logo"
+            onClick={() => this.setPage("main")}
+          >
+            <Img src="Header/logo.svg" />
+          </div>
+        }
       </div>
     </div>
 }

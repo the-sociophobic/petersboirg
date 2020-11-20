@@ -12,10 +12,10 @@ import Contact from 'pages/Contact'
 
 
 const pages = {
-  Main: Main,
-  Activities: Activities,
-  Agency: Agency,
-  Contact: Contact,
+  main: Main,
+  activities: Activities,
+  agency: Agency,
+  contact: Contact,
 }
 
 
@@ -23,8 +23,11 @@ export default class App extends React.Component {
   constructor(props) {
     super(props)
 
+    const currentPage = window.location.pathname.replace('/', '')
+
     this.state = {
-      page: "Contact",
+      page: Object.keys(pages).includes(currentPage) ? currentPage : "main",
+      // page: "contact",
     }
   }
 

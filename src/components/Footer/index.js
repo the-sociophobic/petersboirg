@@ -43,17 +43,22 @@ export default class Footer extends React.Component {
               <FormattedMessage id="Footer.officeSPb" />
               <br />
               <b><FormattedMessage id="Footer.officeSPbAddress" /></b>
-              <br /><br />
-              <FormattedMessage id="Footer.officeLyon" />
-              <br />
-              <b><FormattedMessage id="Footer.officeLyonAddress" /></b>
             </div>
             <div className="footer__down__text__email">
               <br />
               <ExternalLink to="mailto:visit@spbcityguide.ru">
                 visit@spbcityguide.ru
               </ExternalLink>
-              <br /><br /><br />
+            </div>
+          </div>
+          <div className="footer__down__text">
+            <div className="footer__down__text__address">
+              <FormattedMessage id="Footer.officeLyon" />
+              <br />
+              <b><FormattedMessage id="Footer.officeLyonAddress" /></b>
+            </div>
+            <div className="footer__down__text__email">
+              <br />
               <ExternalLink to="mailto:rguironnet@yahoo.fr">
                 rguironnet@yahoo.fr
               </ExternalLink>

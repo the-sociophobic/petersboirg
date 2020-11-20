@@ -90,7 +90,9 @@ export default class Contact extends React.Component {
             className="contact__button__item"
             onClick={() => {}}
           >
-            <FormattedMessage id="Contact.requestButton" />
+            <div className="contact__button__item__text">
+              <FormattedMessage id="Contact.requestButton" />
+            </div>
           </div>
         </div>
       </div>
