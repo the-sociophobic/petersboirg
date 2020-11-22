@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/petersboirg/static/css/main.0108543b.chunk.css",
+    "main.css": "/petersboirg/static/css/main.a0d8a6ec.chunk.css",
     "main.js": "/petersboirg/static/js/main.5a16fbfd.chunk.js",
     "main.js.map": "/petersboirg/static/js/main.5a16fbfd.chunk.js.map",
     "runtime-main.js": "/petersboirg/static/js/runtime-main.88192d38.js",
@@ -8,7 +8,7 @@
     "static/js/2.32564d75.chunk.js": "/petersboirg/static/js/2.32564d75.chunk.js",
     "static/js/2.32564d75.chunk.js.map": "/petersboirg/static/js/2.32564d75.chunk.js.map",
     "index.html": "/petersboirg/index.html",
-    "static/css/main.0108543b.chunk.css.map": "/petersboirg/static/css/main.0108543b.chunk.css.map",
+    "static/css/main.a0d8a6ec.chunk.css.map": "/petersboirg/static/css/main.a0d8a6ec.chunk.css.map",
     "static/js/2.32564d75.chunk.js.LICENSE.txt": "/petersboirg/static/js/2.32564d75.chunk.js.LICENSE.txt",
     "static/media/0.jpg": "/petersboirg/static/media/0.b096be1a.jpg",
     "static/media/1.jpg": "/petersboirg/static/media/1.9c1676ef.jpg",
@@ -23,7 +23,7 @@
     "static/media/7.jpg": "/petersboirg/static/media/7.dd4a0914.jpg",
     "static/media/8.jpg": "/petersboirg/static/media/8.386b24c5.jpg",
     "static/media/9.jpg": "/petersboirg/static/media/9.d044bf45.jpg",
-    "static/media/index.sass": "/petersboirg/static/media/FuturaNewDemi-Reg.0415068b.ttf",
+    "static/media/index.sass": "/petersboirg/static/media/Spectral-SemiBoldItalic.7741fea1.ttf",
     "static/media/arrow.svg": "/petersboirg/static/media/arrow.530de3a9.svg",
     "static/media/background.jpg": "/petersboirg/static/media/background.b9d9bd2c.jpg",
     "static/media/eco.svg": "/petersboirg/static/media/eco.ed7d60f6.svg",
@@ -40,7 +40,7 @@
   "entrypoints": [
     "static/js/runtime-main.88192d38.js",
     "static/js/2.32564d75.chunk.js",
-    "static/css/main.0108543b.chunk.css",
+    "static/css/main.a0d8a6ec.chunk.css",
     "static/js/main.5a16fbfd.chunk.js"
   ]
 }
