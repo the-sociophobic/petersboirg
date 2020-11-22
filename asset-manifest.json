@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/petersboirg/static/css/main.0108543b.chunk.css",
-    "main.js": "/petersboirg/static/js/main.93b5c559.chunk.js",
-    "main.js.map": "/petersboirg/static/js/main.93b5c559.chunk.js.map",
+    "main.js": "/petersboirg/static/js/main.e2e9bcfa.chunk.js",
+    "main.js.map": "/petersboirg/static/js/main.e2e9bcfa.chunk.js.map",
     "runtime-main.js": "/petersboirg/static/js/runtime-main.88192d38.js",
     "runtime-main.js.map": "/petersboirg/static/js/runtime-main.88192d38.js.map",
-    "static/js/2.969664ce.chunk.js": "/petersboirg/static/js/2.969664ce.chunk.js",
-    "static/js/2.969664ce.chunk.js.map": "/petersboirg/static/js/2.969664ce.chunk.js.map",
+    "static/js/2.32564d75.chunk.js": "/petersboirg/static/js/2.32564d75.chunk.js",
+    "static/js/2.32564d75.chunk.js.map": "/petersboirg/static/js/2.32564d75.chunk.js.map",
     "index.html": "/petersboirg/index.html",
     "static/css/main.0108543b.chunk.css.map": "/petersboirg/static/css/main.0108543b.chunk.css.map",
-    "static/js/2.969664ce.chunk.js.LICENSE.txt": "/petersboirg/static/js/2.969664ce.chunk.js.LICENSE.txt",
+    "static/js/2.32564d75.chunk.js.LICENSE.txt": "/petersboirg/static/js/2.32564d75.chunk.js.LICENSE.txt",
     "static/media/0.jpg": "/petersboirg/static/media/0.b096be1a.jpg",
     "static/media/1.jpg": "/petersboirg/static/media/1.9c1676ef.jpg",
     "static/media/10.jpg": "/petersboirg/static/media/10.bdcffc10.jpg",
@@ -39,8 +39,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.88192d38.js",
-    "static/js/2.969664ce.chunk.js",
+    "static/js/2.32564d75.chunk.js",
     "static/css/main.0108543b.chunk.css",
-    "static/js/main.93b5c559.chunk.js"
+    "static/js/main.e2e9bcfa.chunk.js"
   ]
 }
