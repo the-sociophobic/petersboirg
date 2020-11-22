@@ -5,7 +5,8 @@ import {
   StoreContext
 } from 'components/Store'
 import Img from 'components/Img'
-import ExternalLink from 'components/ExternalLink'
+import Link from 'components/Link'
+// import ExternalLink from 'components/ExternalLink'
 import isProd from 'utils/isProd'
 
 
@@ -39,23 +40,15 @@ export default class Header extends React.Component {
       className={`header__nav ${this.state.navOpened && "header__nav--opened"}`}
     >
       {["main", "activities", "agency", "contact"].map(link =>
-        isProd() && false ?
-          <ExternalLink
-            key={link}
-            to={`http://petersbourgevents.com/${link}`}
-            onClick={() => this.setPage(link)}
-            className={`header__nav__item ${this.props.page === link && "header__nav__item--active"}`}
-          >
-            <FormattedMessage id={`Header.${link}`} />
-          </ExternalLink>
-          :
-          <div
-            key={link}
-            className={`header__nav__item ${this.props.page === link && "header__nav__item--active"}`}
-            onClick={() => this.setPage(link)}
-          >
-            <FormattedMessage id={`Header.${link}`} />
-          </div>
+        <Link
+          key={link}
+          to={link}
+          {...this.props}
+          className="header__nav__item"
+          activeClassName="header__nav__item--active"
+        >
+          <FormattedMessage id={`Header.${link}`} />
+        </Link>
       )}
     </div>
 
@@ -85,21 +78,14 @@ export default class Header extends React.Component {
         </div>
         {this.renderNav()}
         {this.renderLang()}
-        {isProd() && false ?
-          <ExternalLink
-            className="header__logo"
-            to="http://petersbourgevents.com"
-          >
-            <Img src="Header/logo.svg" />          
-          </ExternalLink>
-          :
-          <div
-            className="header__logo"
-            onClick={() => this.setPage("main")}
-          >
-            <Img src="Header/logo.svg" />
-          </div>
-        }
+        <Link
+          to=""
+          {...this.props}
+          className="header__logo"
+        >
+          <Img src="Header/logo.svg" />
+        </Link>
+
       </div>
     </div>
 }

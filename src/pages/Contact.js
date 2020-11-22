@@ -1,4 +1,5 @@
 import React from 'react'
+// import ReactDOM from 'react-dom'
 
 import {
   FormattedMessage,
@@ -12,10 +13,26 @@ import Img from 'components/Img'
 export default class Contact extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      showForm: false,
+    }
   }
 
   static contextType = StoreContext
+
+  showForm = () => {
+    const form = document.getElementById('rec252865365')
+
+    form && form.classList.add('show')
+    this.setState({ showForm: true })
+  }
+
+  hideForm = () => {
+    const form = document.getElementById('rec252865365')
+
+    form && form.classList.remove('show')
+    this.setState({ showForm: false })
+  }
 
   renderItem = item =>
     <div className="contact__item">
@@ -88,7 +105,7 @@ export default class Contact extends React.Component {
         >
           <div
             className="contact__button__item"
-            onClick={() => {}}
+            onClick={this.showForm}
           >
             <div className="contact__button__item__text">
               <FormattedMessage id="Contact.requestButton" />
@@ -96,5 +113,10 @@ export default class Contact extends React.Component {
           </div>
         </div>
       </div>
+      {this.state.showForm &&
+        <div
+          className="contact__form-background"
+          onClick={this.hideForm}
+        />}
     </div>
 }

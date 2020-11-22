@@ -3,8 +3,6 @@
 @import '~bootstrap/scss/bootstrap.scss'
 @import './variables.css'
 
-@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@1,300;1,500;1,600&display=swap')
-  
 @font-face
   font-family: 'Futura New'
   src: url('./fonts/Futura New/FuturaNewBook-Reg.ttf') format('truetype')
@@ -14,6 +12,21 @@
   font-family: 'Futura New'
   src: url('./fonts/Futura New/FuturaNewDemi-Reg.ttf') format('truetype')
   font-weight: bold
+
+@font-face
+  font-family: 'Spectral'
+  src: url('./fonts/Spectral/Spectral-LightItalic.ttf') format('truetype')
+  font-weight: 300
+
+@font-face
+  font-family: 'Spectral'
+  src: url('./fonts/Spectral/Spectral-MediumItalic.ttf') format('truetype')
+  font-weight: 500
+
+@font-face
+  font-family: 'Spectral'
+  src: url('./fonts/Spectral/Spectral-SemiBoldItalic.ttf') format('truetype')
+  font-weight: 600
 
 
 
@@ -63,7 +76,6 @@ $breakpoint-1024: 1024px
   letter-spacing: -.2px
   margin: 0
   box-sizing: border-box
-  font-style: italic
   // @extend .noselect
   // overflow: hidden
 
@@ -73,20 +85,40 @@ html, body, #root, .App
   color: $font-color
   background-color: $background-color
 
+html
+  @media (min-width: 300px)
+    font-size: 14px
+  @media (min-width: 350px)
+    font-size: 12px
+  @media (min-width: 576px)
+    font-size: 12px
+  @media (min-width: 768px)
+    font-size: 14px
+  @media (min-width: 992px)
+    font-size: 18px
+  @media (min-width: 1024px)
+    font-size: 18px
+  @media (min-width: 1200px)
+    font-size: 22px
+  @media (min-width: 1400px)
+    font-size: 26px
+  @media (min-width: 1600px)
+    font-size: 30px
+
 .App
   @extend .d-flex
   @extend .flex-column
   overflow-x: hidden
-  @include media-breakpoint-up(xs)
-    font-size: 14px
-  @include media-breakpoint-up(sm)
-    font-size: 14px
-  @include media-breakpoint-up(md)
-    font-size: 16px
-  @include media-breakpoint-up(lg)
-    font-size: 16px
-  @include media-breakpoint-up(xl)
-    font-size: 20px
+  // @include media-breakpoint-up(xs)
+  //   font-size: 14px
+  // @include media-breakpoint-up(sm)
+  //   font-size: 14px
+  // @include media-breakpoint-up(md)
+  //   font-size: 16px
+  // @include media-breakpoint-up(lg)
+  //   font-size: 16px
+  // @include media-breakpoint-up(xl)
+  //   font-size: 20px
   .content
     // flex: auto
     // flex-grow: 2
@@ -97,9 +129,9 @@ html, body, #root, .App
   width: 90% !important
   max-width: none
 
-@media screen and ( min-width: 1800px )
-  html
-    font-size: 30px
+// @media screen and ( min-width: 1200px )
+//   html
+//     font-size: 30px
   
 
 
@@ -222,7 +254,6 @@ html, body, #root, .App
       // line-height: 84px
       line-height: calc(84rem / 33)
       margin: 6px 0 20px
-      img
     &__projects
       border-top: $border
       height: 200px
@@ -234,18 +265,22 @@ html, body, #root, .App
         @extend .flex-column
         @extend .justify-content-center
         &:not(:last-child)
-          @media screen and ( min-width: 768px + 1px )
+          @media screen and ( min-width: 768px )
             border-right: $border
-          @media screen and ( max-width: 768px )
+          @media screen and ( max-width: 768px - 1px )
             border-bottom: $border
         &__name
           // font-size: 39px
           font-size: calc(39rem / 33)
           font-weight: 500
+          @media screen and ( max-width: 768px - 1px )
+            padding-left: 0 !important
         &__place
           font-size: calc(29rem / 33)
           font-weight: 300
           text-align: right
+          @media screen and ( max-width: 768px - 1px )
+            padding-right: 0 !important
         &:nth-of-type(1) &__place
           padding-right: $padding
         &:nth-of-type(2) &__name
@@ -394,11 +429,11 @@ html, body, #root, .App
     &--left &__symbol
       transform: rotate(180deg) translateY(40%)
       top: 0
-      left: 0
+      right: 0
     &--right &__symbol
       transform: translateY(40%)
       bottom: 0
-      right: 0
+      left: 0
   &__line-container
     @extend .row
     width: 100%
@@ -480,6 +515,7 @@ $dropdown-transition: .3s
   @extend .flex-column
   &__title
     @extend .row
+    @extend .noselect
     cursor: pointer
     padding-left: $off-len
     padding-right: $off-len
@@ -496,8 +532,8 @@ $dropdown-transition: .3s
       transform: translate(-100%, 0)
       transition: left $dropdown-transition, transform $dropdown-transition
       .dropdown--opened &
-        left: 0%
-        transform: translateX(0%)
+        // left: 0%
+        // transform: translateX(0%)
   &__content
     width: 100%
     overflow: hidden
@@ -520,6 +556,7 @@ $dropdown-transition: .3s
     &__img
       img
         width: 100%
+        height: auto
     &__paragraph
       padding-right: $off-len
       @extend .d-flex
@@ -585,6 +622,7 @@ $dropdown-transition: .3s
     padding-right: $off-len
     img
       width: 100%
+      height: auto
 
 
 
@@ -705,3 +743,25 @@ img.img
         position: absolute
         transform: translate(-50%, -50%)
         white-space: nowrap
+  &__form-background
+    position: fixed
+    z-index: 2000
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0, 0, 0, .8)
+    cursor: pointer
+
+
+
+#rec252865365
+  display: none
+  position: fixed
+  z-index: 2001
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 70%
+  &.show
+    display: block

@@ -3,6 +3,7 @@ import React from 'react'
 import { FormattedMessage } from 'components/Store'
 import Quotes from 'components/Quotes'
 import Video from 'components/Video'
+import isMobile from 'utils/isMobile'
 
 
 export default class Main extends React.Component {
@@ -11,7 +12,8 @@ export default class Main extends React.Component {
       <div className="row d-flex justify-content-center">
         <div className="main__background">
           <div className="main__background__container">
-            <Video autoplay src="VxP1zavsTtU" />
+            {!isMobile() &&
+              <Video autoplay src="VxP1zavsTtU" />}
           </div>
         </div>
       </div>

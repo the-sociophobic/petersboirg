@@ -31,11 +31,22 @@ const Section = props =>
           <Img src={props.img1} />
         </div>
       </div>}
-    <div className="section__row-final">
-      {props.finalImg && <Img src={props.finalImg} />}
-      {props.finalImg1 && <Img src={props.finalImg1} />}
-      {props.finalVideo && <Video src={props.finalVideo} />}
-    </div>
+    {props.finalImg &&
+      <div className="section__row-final">
+        <div className="col">
+          <Img src={props.finalImg} />
+        </div>
+      </div>}
+    {props.finalImg1 &&
+      <div className="section__row-final mt-5">
+        <div className="col">
+          <Img src={props.finalImg1} />
+        </div>
+      </div>}
+    {props.finalVideo &&
+      <div className="section__row-final">
+        <Video src={props.finalVideo} />
+      </div>}
   </div>
 
 

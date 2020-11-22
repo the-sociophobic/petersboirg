@@ -7,7 +7,7 @@ const ExternalLink = props =>
     href={props.to}
     target={props.newTab ? "_blank" : ""}
     rel="noopener noreferrer"
-    onClick={() => props.onClick()}
+    onClick={() => props.onClick && props.onClick()}
   >
     {props.children}
   </a>

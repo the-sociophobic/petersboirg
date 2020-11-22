@@ -86,6 +86,7 @@ export default class Footer extends React.Component {
               ].map((logo, index) =>
                 <ExternalLink
                   key={index}
+                  newTab
                   to={logo.url}
                   className="footer__down__logos__partners__item"
                 >
@@ -114,6 +115,7 @@ export default class Footer extends React.Component {
               ].map((logo, index) =>
                 <ExternalLink
                   key={index}
+                  newTab
                   to={logo.url}
                   className="footer__down__logos__social__item"
                 >
