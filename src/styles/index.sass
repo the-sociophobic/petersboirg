@@ -41,7 +41,7 @@ $background-color: $light
 
 $border-width: 2px
 $border: $border-width solid $main
-$padding: 1.5em
+$padding: 1.5rem
 
 
 $some-var: var(--some-var)
@@ -76,8 +76,6 @@ $breakpoint-1024: 1024px
   letter-spacing: -.2px
   margin: 0
   box-sizing: border-box
-  // @extend .noselect
-  // overflow: hidden
 
 html, body, #root, .App
   width: 100%
@@ -109,30 +107,13 @@ html
   @extend .d-flex
   @extend .flex-column
   overflow-x: hidden
-  // @include media-breakpoint-up(xs)
-  //   font-size: 14px
-  // @include media-breakpoint-up(sm)
-  //   font-size: 14px
-  // @include media-breakpoint-up(md)
-  //   font-size: 16px
-  // @include media-breakpoint-up(lg)
-  //   font-size: 16px
-  // @include media-breakpoint-up(xl)
-  //   font-size: 20px
   .content
-    // flex: auto
-    // flex-grow: 2
 
 
 
 .container
   width: 90% !important
   max-width: none
-
-// @media screen and ( min-width: 1200px )
-//   html
-//     font-size: 30px
-  
 
 
 .t-tildalabel, #tildacopy, .t-rec
@@ -155,29 +136,29 @@ html
     @extend .row
     border: $border
   &__nav
-    @extend .col-sm-4
+    @extend .col-md-4
     @extend .col-6
     @extend .d-flex
-    @extend .flex-sm-row
+    @extend .flex-md-row
     @extend .flex-column
     background-color: $light
-    @media screen and ( max-width: 576px )
+    @include media-breakpoint-down(sm)
       border: $border
       position: absolute
       left: -$border-width
       top: 100%
     &:not(&--opened)
-      @media screen and ( max-width: 576px )
+      @include media-breakpoint-down(sm)
         display: none !important
     &__item
       @extend .col
-      @extend .d-sm-flex
+      @extend .d-md-flex
       @extend .align-items-center
       border-right: $border
       font-family: 'Futura New', sans-serif
       color: $dark !important
       font-size: calc(24rem / 33)
-      @media screen and ( max-width: 576px )
+      @include media-breakpoint-down(sm)
         font-size: calc(48rem / 33)
         line-height: 3
         border-right: 0
@@ -195,7 +176,7 @@ html
       &:hover
         text-decoration: none !important
   &__burger
-    @extend .d-sm-none
+    @extend .d-md-none
     @extend .col-2
     border-right: $border
     position: relative
@@ -207,12 +188,21 @@ html
       background-color: $dark
       left: 25%
       transform: translateY(-50%)
+      transition: top, transform .15s
     &::before
       top: 40%
     &::after
       top: 60%
+    &--opened
+      &::before,
+      &::after
+        top: 50%
+      &::before
+        transform: translateY(-50%) rotate(20deg)
+      &::after
+        transform: translateY(-50%) rotate(-20deg)
   &__lang
-    @extend .col-sm-2
+    @extend .col-md-2
     @extend .col-3
     border-right: $border
     @extend .d-flex
@@ -220,13 +210,12 @@ html
     @extend .justify-content-around
     @extend .align-items-center
     &__item
-      // font-size: 37px
       font-size: calc(37rem / 33)
       cursor: pointer
       &--active
         color: $main
   &__logo
-    @extend .col-sm-3
+    @extend .col-md-3
     @extend .col-4
     @extend .d-flex
     @extend .justify-content-center
@@ -407,7 +396,7 @@ html
     padding-left: $off-len
     padding-right: $off-len
     font-size: calc(82rem / 33)
-    @media screen and ( max-width: 576px )
+    @include media-breakpoint-down(sm)
       font-size: calc(60rem / 33)
     // margin-bottom: calc(177rem / 30)
     font-weight: 400
@@ -419,7 +408,7 @@ html
     padding-right: $off-len
     @extend .col-1
     font-size: calc(350rem / 33)
-    @media screen and ( max-width: 576px )
+    @include media-breakpoint-down(sm)
       font-size: calc(250rem / 33)
     position: relative
     &__symbol
@@ -475,7 +464,7 @@ html
     &__item
       font-family: 'Futura New'
       font-size: calc(46rem / 33)
-      @media screen and ( max-width: 576px )
+      @include media-breakpoint-down(sm)
         font-size: calc(36rem / 33)
       line-height: calc(87rem / 33)
       // padding-bottom: calc(87rem / 33)
@@ -522,7 +511,7 @@ $dropdown-transition: .3s
     &__text
       display: inline-block
       font-size: calc(80rem / 33)
-      @media screen and ( max-width: 576px )
+      @include media-breakpoint-down(sm)
         font-size: calc(36rem / 33)
       line-height: 1.25
       padding-top: calc(50rem / 33)
@@ -637,9 +626,6 @@ $dropdown-transition: .3s
     width: 100%
     height: 100%
 
-img.img
-  // width: 100%
-
 
 
 .agency
@@ -663,7 +649,7 @@ img.img
   &__text1
     margin-bottom: calc(90rem / 33)
     font-size: calc(82rem / 33)
-    @media screen and ( max-width: 576px )
+    @include media-breakpoint-down(sm)
       font-size: calc(50rem / 33)
     color: $main
     position: relative
@@ -697,7 +683,7 @@ img.img
       a
         color: $dark
         font-size: calc(82rem / 33)
-        @media screen and ( max-width: 576px )
+        @include media-breakpoint-down(sm)
           font-size: calc(50rem / 33)
         line-height: 1
         font-weight: bold

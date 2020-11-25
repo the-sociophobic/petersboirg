@@ -6,8 +6,6 @@ import {
 } from 'components/Store'
 import Img from 'components/Img'
 import Link from 'components/Link'
-// import ExternalLink from 'components/ExternalLink'
-import isProd from 'utils/isProd'
 
 
 export default class Header extends React.Component {
@@ -24,6 +22,7 @@ export default class Header extends React.Component {
     window.addEventListener('click', e =>
       e.target !== this.burgerRef.current &&
       e.target !== this.navRef.current &&
+      this.state.navOpened &&
         this.setState({ navOpened: false }))
   }
 
@@ -71,11 +70,9 @@ export default class Header extends React.Component {
       <div className="header__fixed-content">
         <div
           ref={this.burgerRef}
-          className="header__burger"
+          className={`header__burger ${this.state.navOpened && "header__burger--opened"}`}
           onClick={() => this.setState({ navOpened: !this.state.navOpened })}
-        >
-
-        </div>
+        />
         {this.renderNav()}
         {this.renderLang()}
         <Link

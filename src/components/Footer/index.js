@@ -77,21 +77,29 @@ export default class Footer extends React.Component {
                 },
                 {
                   logo: 'Footer/logos/petersboirg.svg',
-                  url: "",
+                  url: "https://petersbourgvoyages.com",
                 },
                 {
                   logo: 'Footer/logos/eco.svg',
-                  url: "",
+                  // url: "",
                 },
               ].map((logo, index) =>
-                <ExternalLink
-                  key={index}
-                  newTab
-                  to={logo.url}
-                  className="footer__down__logos__partners__item"
-                >
-                  <Img src={logo.logo} />
-                </ExternalLink>
+                !logo.url ? 
+                  <Img
+                    src={logo.logo}
+                    className="footer__down__logos__partners__item"
+                  />
+                  :
+                  <ExternalLink
+                    key={index}
+                    newTab
+                    to={logo.url}
+                  >
+                    <Img
+                      src={logo.logo}
+                      className="footer__down__logos__partners__item"
+                    />
+                  </ExternalLink>
               )}
             </div>
             <div className="footer__down__logos__social">
@@ -106,21 +114,29 @@ export default class Footer extends React.Component {
                 },
                 {
                   logo: 'Footer/social/linkedin.svg',
-                  url: "",
+                  // url: "",
                 },
                 {
                   logo: 'Footer/social/fb.svg',
                   url: getMessage(this, "Footer.links.fb"),
                 },
               ].map((logo, index) =>
-                <ExternalLink
-                  key={index}
-                  newTab
-                  to={logo.url}
-                  className="footer__down__logos__social__item"
-                >
-                  <Img src={logo.logo} />
-                </ExternalLink>
+                !logo.url ?
+                  <Img
+                    src={logo.logo}
+                    className="footer__down__logos__social__item"
+                  />
+                  :
+                  <ExternalLink
+                    key={index}
+                    newTab
+                    to={logo.url}                    
+                  >
+                    <Img
+                      src={logo.logo}
+                      className="footer__down__logos__social__item"
+                    />
+                  </ExternalLink>
               )}
             </div>
           </div>

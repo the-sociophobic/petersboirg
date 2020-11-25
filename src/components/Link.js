@@ -1,6 +1,6 @@
 import React from 'react'
 
-import isProd from 'utils/isProd'
+// import isProd from 'utils/isProd'
 
 
 const Link = props =>
