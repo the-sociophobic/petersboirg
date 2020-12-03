@@ -31,9 +31,9 @@
 
 
 $dark: #0C293B
-$light: #E0D5CD
+$light: var(--background-color)
 $footer-light: #E8E2DC
-$main: #F14421
+$main: var(--main-color)
 $second: #ACA097
 
 $font-color: $dark
@@ -153,6 +153,7 @@ html
     &__item
       @extend .col
       @extend .d-md-flex
+      @extend .justify-content-sm-center
       @extend .align-items-center
       border-right: $border
       font-family: 'Futura New', sans-serif
@@ -162,7 +163,7 @@ html
         font-size: calc(48rem / 33)
         line-height: 3
         border-right: 0
-      padding-left: $padding
+        padding-left: $padding
       position: relative
       cursor: pointer
       &--active::after
@@ -228,6 +229,8 @@ html
   
 
 .footer
+  .second-app &
+    @extend .mt-5
   &__top
     @extend .container
     color: $main
@@ -751,3 +754,72 @@ $dropdown-transition: .3s
   width: 70%
   &.show
     display: block
+
+
+
+.main2
+  border-right: $border
+  border-bottom: $border
+  border-left: $border
+  &__first
+    border-bottom: $border
+    @extend .row
+    @extend .justify-content-between
+    &__left
+      @extend .col-md-4
+      @extend .col-9
+      @extend .pl-5
+      *
+        color: $main !important
+      &__title
+        font-size: calc(105rem / 33)
+        line-height: calc(107rem / 33)
+        @extend .mt-5
+        @extend .mb-4
+      &__tagline
+        font-family: 'Futura New'
+        font-size: calc(47rem / 33)
+        @extend .mb-5
+    &__right
+      @extend .col-md-4
+      @extend .col-9
+      @extend .d-md-block
+      @extend .d-none
+      &__video
+        margin-top: calc(55rem / 33)
+        width: 70%
+        position: relative
+        z-index: 30
+        .video
+          position: relative
+          z-index: 30
+          clip-path: url(#my-clip-path)
+          padding-top: calc(100% / 516 * 745)
+        &::before, &::after
+          content: ''
+          position: absolute
+          width: 100%
+          height: 100%
+        &::after
+          top: 0
+          left: 0
+          z-index: 50
+        &::before
+          top: calc(2rem / 33)
+          left: calc(158rem / 33)
+          z-index: 20
+          background-image: url(./img/Main2/frame.svg)
+          background-position: center
+          background-repeat: no-repeat
+          background-size: contain
+  &__second
+    @extend .p-2
+
+
+
+
+
+//MAP
+.leaflet-container
+  height: calc(592rem / 33)
+  z-index: 10

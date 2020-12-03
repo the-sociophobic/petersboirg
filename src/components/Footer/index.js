@@ -14,28 +14,30 @@ export default class Footer extends React.Component {
 
   render = () =>
     <div className="footer">
-      <div className="footer__top">
-        <div className="footer__top__agenda">
-          <FormattedMessage id="Footer.agenda" />
-          <Img src='Footer/arrow.svg' />
-        </div>
-        <div className="footer__top__projects">
-          {["graduation", "pure", "IFTM"]
-            .map(project =>
-              <div
-                key={project}
-                className="footer__top__projects__item"
-              >
-                <div className="footer__top__projects__item__name">
-                  <FormattedMessage id={`Footer.projects.${project}.name`} />
+      {!this.props.secondApp &&
+        <div className="footer__top">
+          <div className="footer__top__agenda">
+            <FormattedMessage id="Footer.agenda" />
+            <Img src='Footer/arrow.svg' />
+          </div>
+          <div className="footer__top__projects">
+            {["graduation", "pure", "IFTM"]
+              .map(project =>
+                <div
+                  key={project}
+                  className="footer__top__projects__item"
+                >
+                  <div className="footer__top__projects__item__name">
+                    <FormattedMessage id={`Footer.projects.${project}.name`} />
+                  </div>
+                  <div className="footer__top__projects__item__place">
+                    <FormattedMessage id={`Footer.projects.${project}.place`} />
+                  </div>
                 </div>
-                <div className="footer__top__projects__item__place">
-                  <FormattedMessage id={`Footer.projects.${project}.place`} />
-                </div>
-              </div>
-          )}
+            )}
+          </div>
         </div>
-      </div>
+      }
       <div className="footer__down">
         <div className="container">
           <div className="footer__down__text">
@@ -77,7 +79,7 @@ export default class Footer extends React.Component {
                 },
                 {
                   logo: 'Footer/logos/petersboirg.svg',
-                  url: "https://petersbourgvoyages.com",
+                  url: this.props.secondApp ? "https://petersbourgevents.com" : "https://petersbourgvoyages.com",
                 },
                 {
                   logo: 'Footer/logos/eco.svg',
@@ -86,6 +88,7 @@ export default class Footer extends React.Component {
               ].map((logo, index) =>
                 !logo.url ? 
                   <Img
+                    key={index}
                     src={logo.logo}
                     className="footer__down__logos__partners__item"
                   />
@@ -123,6 +126,7 @@ export default class Footer extends React.Component {
               ].map((logo, index) =>
                 !logo.url ?
                   <Img
+                    key={index}
                     src={logo.logo}
                     className="footer__down__logos__social__item"
                   />

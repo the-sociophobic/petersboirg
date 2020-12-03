@@ -38,7 +38,7 @@ export default class Header extends React.Component {
       ref={this.navRef}
       className={`header__nav ${this.state.navOpened && "header__nav--opened"}`}
     >
-      {["main", "activities", "agency", "contact"].map(link =>
+      {this.props.pages.map(link =>
         <Link
           key={link}
           to={link}
@@ -80,7 +80,7 @@ export default class Header extends React.Component {
           {...this.props}
           className="header__logo"
         >
-          <Img src="Header/logo.svg" />
+          <Img src={`Header/${this.props.secondApp ? "logo-second-app" : "logo"}.svg`} />
         </Link>
 
       </div>

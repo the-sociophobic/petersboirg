@@ -3,7 +3,11 @@ const defaultMessages = {
     main: ["главная", "accueil", "main"],
     activities: ["продукты", "activités", "activities"],
     agency: ["концепт", "agence", "agency"],
-    contact: ["контакты", "contact", "contact"]
+    contact: ["контакты", "contact", "contact"],
+
+    inspiration: ["вдохновение", "inspirations", "inspiration"],
+    programs: ["программы", "programmes", "programs"],
+    concept: ["концепт", "agence", "concept"]
   },
 
   Footer: {
@@ -163,6 +167,94 @@ const defaultMessages = {
     requestButton: ["Отправьте запрос", "Demandez un devis", "Send your request"],
   },
 
+
+  //SECOND SITE
+  Main2: {
+    title: ["Бюро аутентичных путешествий", "Référence locale experte pour un voyage authentique", "Local experts to give you authentic experiences"],
+    tagline: ["соавтор ваших историй", "Créateur de séjours à la carte", "Voyages à la carte designer"],
+    text0: ["Глубокая экспертиза нашего агентства распространяется локально на Петербург и Ленинградскую область и выходит за рамки региона, что позволит вам запланировать путешествие «mix and match».", "La zone de grande expertise de notre agence s’étend localement, de Saint Pétersbourg à la région de Leningrad et sur d’autres villes vous permettant d’apprécier des combinaisons de voyage équilibrées « mix and match ».", "The zone of deep expertise of our agency extends from Saint Petersburg and the Leningrad region to other cities by making it possible to assemble a balanced travel combination «mix and match»."],
+    headline0: ["", "« Destinations combinées » avec Saint Pétersbourg : Moscou, Sochi, Helsinki, Riga, Tallinn, Stockholm. En train, avion ou croisière.", "«Destinations to combine» with Saint Petersburg: Moscow, Sochi, Helsinki, Riga, Tallinn, Stockholm. By train, plane or cruise ship."],
+    headline1: ["Экспертные партнеры", "Relais d’experts", "Relay of experts"],
+    text1: ["Благодаря надежным и близким по духу партнерам, мы поможем дополнить визит в Петербург поездкой в другие города России, в соседние Скандинавские и Прибалтийские страны.", "Si vous souhaitez combiner votre visite de Saint Pétersbourg avec d’autres villes russes comme Moscou, Sochi ou avec les pays voisins : Scandinaves ou Baltes, nous saurons vous accompagner, grâce au support d’un réseau sélectionné, sur chacune de ces destinations.", "If you wish to combine your trip to Saint Petersburg with other Russian cities like Moscow, Sochi or with the neighboring Scandinavian or Baltic countries, we can accompany you there thanks to the effective partnerships and networking, at each destination."],
+    info: {
+      flights: {
+        title: ["", "Vols", "Flights"],
+        boldText: ["", "Paris / Lyon / Marseille / Nice", "London / Milan / Barcelona / Berlin / Stockholm"],
+        text: ["", " – Saint Pétersbourg / Moscou", " – Saint Petersburg / Moscow"],
+      },
+      visa: {
+        title: ["", "Visa", "Visa"],
+        text: ["", "http://electronic-visa.kdmid.ru/spb_home_en.html", "http://electronic-visa.kdmid.ru/spb_home_en.html"],
+      },
+      time: {
+        title: ["", "Décalage horaire", "Time difference"],
+        text: ["", "A Moscou, il est actuellement  :", "Current local time in Moscow:"],
+      },
+      currency: {
+        title: ["", "Roubles/ euros", "Rubles / euros"],
+        text: ["", "Le taux de change actuel :", "Current exchange rate:"],
+      }
+    }
+  },
+
+  Inspiration: {
+    title: ["", "", ""],
+    tagline: ["", "", ""],
+
+    Authentic: {
+      title: ["", "", ""],
+    },
+    Famous: {
+      title: ["", "", ""],
+    },
+    Significant: {
+      title: ["", "", ""],
+    },
+    AroundBallet: {
+      title: ["", "", ""],
+    },
+    AroundArtists: {
+      title: ["", "", ""],
+    },
+    AroundArt: {
+      title: ["", "", ""],
+    },
+    Sport: {
+      title: ["", "", ""],
+    },
+  },
+
+  Programs: {
+    voyagers: {
+      title: ["", "", ""],
+      tagline: ["", "", ""],
+
+      Couple: {
+        title: ["", "", ""],
+      },
+      Family: {
+        title: ["", "", ""],
+      },
+      Friends: {
+        title: ["", "", ""],
+      },
+      School: {
+        title: ["", "", ""],
+      },
+      Works: {
+        title: ["", "", ""],
+      },
+    },
+    programs: {
+      title: ["", "", ""],
+      tagline: ["", "", ""],
+
+      Autumn: {
+        
+      },
+      proposalPDF: ["", "", ""],
+    },
+  }
 }
 
 

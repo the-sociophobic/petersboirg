@@ -1,3 +1,8 @@
 :root {
-  --some-var: 10px;
+  --main-color: #F14421;
+  --background-color: #E0D5CD;
+}
+.second-app {
+  --main-color: #E8E2DC;
+  --background-color: #94AAC2;
 }
