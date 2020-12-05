@@ -1,11 +1,14 @@
 import React from 'react'
 import _ from 'lodash'
 
-import { StoreContext } from 'components/Store'
+import {
+  FormattedMessage,
+  StoreContext
+} from 'components/Store'
 import Quotes from 'components/Quotes'
-import { FormattedMessage } from 'components/Store'
 import Dropdown from 'components/Dropdown'
 import Section from 'components/Section'
+import getAttribsFrom from 'utils/getAttribsFrom'
 
 
 export default class FolderTabContents extends React.Component {
@@ -33,11 +36,7 @@ export default class FolderTabContents extends React.Component {
             <Section
               {...
                 _.mapValues(
-                  _.mapKeys(
-                    _.pickBy(this.context.messages, (value, key) =>
-                      key.startsWith(`Activities.${this.props.tab}.${section}.`))
-                    , (value, key) =>
-                      key.replace(`Activities.${this.props.tab}.${section}.`, ''))
+                  getAttribsFrom(this.context.messages, `Activities.${this.props.tab}.${section}`)
                   , (value, key) =>
                     key.includes('mg') && value ?
                       `Activities/${this.props.tab}/${value}`

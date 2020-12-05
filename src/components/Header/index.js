@@ -46,7 +46,9 @@ export default class Header extends React.Component {
           className="header__nav__item"
           activeClassName="header__nav__item--active"
         >
-          <FormattedMessage id={`Header.${link}`} />
+          <div className="header__nav__item__text">
+            <FormattedMessage id={`Header.${link}`} />
+          </div>
         </Link>
       )}
     </div>

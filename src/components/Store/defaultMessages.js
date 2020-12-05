@@ -198,30 +198,60 @@ const defaultMessages = {
   },
 
   Inspiration: {
-    title: ["", "", ""],
-    tagline: ["", "", ""],
+    video: ["QQczuS9Wl2s", "QQczuS9Wl2s", "QQczuS9Wl2s"],
+    title: ["Вдохновение", "Inspirations", "Inspirations"],
+    tagline: ["почувствовать аутентичность", "Evadez-vous au sein de la vie pétersbourgeoise et venez découvrir ses charmes singuliers", "Escape to the heart of Saint Petersburg to feel its singular charm"],
 
-    Authentic: {
-      title: ["", "", ""],
-    },
-    Famous: {
-      title: ["", "", ""],
-    },
-    Significant: {
-      title: ["", "", ""],
-    },
-    AroundBallet: {
-      title: ["", "", ""],
-    },
-    AroundArtists: {
-      title: ["", "", ""],
-    },
-    AroundArt: {
-      title: ["", "", ""],
-    },
-    Sport: {
-      title: ["", "", ""],
-    },
+    dropdowns: {
+      Authentic: {
+        title: ["Почувствовать аутентичность", "Séjour authentique", "Authentiс visit"],
+        paragraphs: {
+          twoCities: {
+            imgTop: [true, true, true],
+            img: ["0.jpg", "1.jpg", "1.jpg"],
+            title: ["Прогулка с известным петербуржцем", "Deux villes en une", "Two cities in one"],
+            text: ["Каков Петербург тех, кто сам уже стал частью петербургского «культурного кода»? Встретиться с настоящим героем нашего времени, заглянуть в секретные места и услышать живой рассказ свидетеля эпохи о буднях Ленинграда и Питера прошлого и настоящего, который не прочесть ни в одном учебнике.", "La ville de Pierre le Grand est connue dans le monde entier pour son histoire étincellante et son riche patrimoine culturel.\nDe nos jours, elle affiche également l’image forte d’une ville jeune, dynamique dotée d’un caractère rempli d’énergie comme les vagues de la Neva et de la mer Baltique. C’est la ville qui symbolise pour les russes la liberté et la proximité avec l’Europe par la géographie et par l’esprit. Dévoiler les deux villes qui existent en parallèle : derrière la fameuse façade, aller à la rencontre de la ville informelle, avec ses rues étroites, ses cours atypiques, ADN des lieux et ses cafés authentiques.", "The city of Peter the Great is worldwide known for its brilliant history and its rich cultural heritage. Today Saint Petersburg presents also an image of a young city with a strong character full of energy, as the waves of the Neva river and the Baltic Sea. For the Russians, it symbolizes liberty and closeness to Europe, geographically and in spirit.\nDiscover these two cities that exist in parallel: plunge into the atmosphere behind the famous facades to disclose the non-formal city with its narrow streets, atypical yards and authentic cafés."],
+          },
+          architecture: {
+            imgBottom: [true, true, true],
+            img: ["1.jpg", "33.jpg", "33.jpg"],
+            title: ["Классический Петербург и культовый Питер", "Architecture : reflet historique", "Architecture: twists of history"],
+            text: ["Два города, живущих параллельно...\nВеликолепие барочных дворцов и таинственность дворов-колодцев. Главные места в Северной столице и неизвестный питерский андеграунд. Крыши, парадные, атриумы, мосты, доходные дома и все то, что делает Петербург особенным.", "Les styles architecturaux et les éléments des bâtiments à Saint Pétersbourg résultent d’un mélange emprunté aux capitales européennes et de leurs transformations souhaitées et imaginées par les grands dirigeants de la ville.\nConstruite selon le projet du tsar Pierre le Grand, la ville est devenue la résidence principale de la famille impériale des Romanov, pendant plusieurs générations. Véritable musée à ciel ouvert avec ses Palais et Cathédrales splendides, complété par les éléments brutaux soviétiques, la ville se développe aujourd’hui vers la modernité et s’offre un look contemporain (Laktha Center (tour Gazprom), Sevcable, etc.).", "The architectural styles and decoration elements in Saint Petersburg represent the mix of European borrowings and their reinterpretations based on the local visions. The city constructed under the project of the Tsar Peter the Great became the main residence for the several generations of the Imperial Romanov Family. Being the real open-air museum with its splendid Palaces and Cathedrals, completed with the brutal soviet elements, the city is developing to the new contemporary look (Laktha Center-Gazprom, Sevcable, etc.)."],
+          },
+          bird: {
+            imgTop: [true, true, true],
+            img: ["2.jpg", "34.jpg", "34.jpg"],
+            title: ["Петербург с высоты птичьего полета", "", ""],
+            text: ["Экскурсия на вертолете – это гармония и ритм центральных улиц и площадей, строгая симметрия строений и изящество главных доминант. Петропавловская крепость и Лахта-центр, Невский проспект и Адмиралтейские верфи – город, каким его увидел гениальный создатель.", "", ""],
+          },
+          venice: {
+            imgBottom: [true, true, true],
+            oi: [false, true, true],
+            img: ["3.jpg", "", ""],
+            title: ["Встреча рассвета на венецианской яхте", "Venise du Nord", "Northern Veniсe"],
+            text: ["Проснуться, когда все еще спят, пройти по свежим пустынным улицам, сесть на венецианскую яхту, которая увезет вас по нежно-дымчатым каналам встречать рассвет один на один с городом.", "Le romantisme de Saint Pétersbourg s’exprime par son emplacement extraordinaire : la ville est bordée par la mer Baltique et traversée par la grande Néva. Les courbes des petits fleuves et des canaux qui serpentent dans ville s’incorporent harmonieusement dans la régularité des rues.\nConstituée de plusieurs îles, de dimensions différentes, la ville offre une grande diversité au niveau de l’architecture qui se ressent également dans les modes de vie. Imaginez combien de ponts relient les îles et les quartiers. Pendant la saison de navigation, profitez d’un voyage en bateau à la journée pour ressentir profondément la nature de Saint Pétersbourg ou dans la nuit pour assister au miracle des ponts qui s’ouvrent.", "The extraordinary location of Saint Petersburg is translated into its romanticism: the city is bordered by the Baltic Sea and is crossed by the Neva river. And the curves of the small rivers and canals are incorporated harmoniously into the city regularity.\nSituated on the numerous, different sized islands, the city offers the large diversity of architectural styles that reflects also on the citizens’ lifestyle. Try to imagine how many bridges connect the islands and the districts. During the navigation season profit a boat trip, to enjoy the charming city framework in daytime or to participate at the miracle of the moving bridges at night."],
+          },
+        }
+      },
+      Famous: {
+        title: ["Музеи", "Personnages célèbres", "Famous personages"],
+      },
+      Significant: {
+        title: ["Императорский загород", "Faits historiques marquants", "Significant facts of history"],
+      },
+      AroundBallet: {
+        title: ["Балет", "Autour des ballets ", "Around the ballet"],
+      },
+      AroundArtists: {
+        title: ["Художники и писатели", "Autour des artistes et écrivains", "Around the famous artists"],
+      },
+      AroundArt: {
+        title: ["История", "Autour des arts : musées", "Around the art: museums"],
+      },
+      Sport: {
+        title: ["Спорт и природа", "Séjour sportif / nature", "Sport visit / nature"],
+      },
+    }
   },
 
   Programs: {

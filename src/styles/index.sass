@@ -136,13 +136,16 @@ html
     @extend .row
     border: $border
   &__nav
-    @extend .col-md-4
-    @extend .col-6
     @extend .d-flex
     @extend .flex-md-row
     @extend .flex-column
+    @extend .flex-grow-1
     background-color: $light
     @include media-breakpoint-down(sm)
+      // @extend .col-6
+      flex: 0 0 66.66667%
+      max-width: 66.66667%
+      width: 100%
       border: $border
       position: absolute
       left: -$border-width
@@ -155,32 +158,42 @@ html
       @extend .d-md-flex
       @extend .justify-content-sm-center
       @extend .align-items-center
+      @extend .flex-grow-1
       border-right: $border
-      font-family: 'Futura New', sans-serif
-      color: $dark !important
-      font-size: calc(24rem / 33)
+      cursor: pointer
       @include media-breakpoint-down(sm)
-        font-size: calc(48rem / 33)
-        line-height: 3
         border-right: 0
         padding-left: $padding
-      position: relative
-      cursor: pointer
-      &--active::after
-        content: ''
-        position: absolute
-        top: 35%
-        left: $padding
-        width: 25%
-        height: 2px
-        background-color: $dark
       &:hover
         text-decoration: none !important
+      &__text
+        position: relative
+        font-family: 'Futura New', sans-serif
+        color: $dark !important
+        font-size: calc(24rem / 33)
+        @include media-breakpoint-down(md)
+          font-size: calc(30rem / 33)
+        @include media-breakpoint-down(sm)
+          font-size: calc(48rem / 33)
+          line-height: 3
+      &--active &__text::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: calc(44rem / 33)
+        height: 2px
+        background-color: $dark
+        @include media-breakpoint-down(sm)
+          top: 30%
+          width: calc(44rem * 2 / 33)
+
   &__burger
     @extend .d-md-none
     @extend .col-2
     border-right: $border
     position: relative
+    cursor: pointer
     &::before, &::after
       content: ''
       position: absolute
@@ -217,12 +230,14 @@ html
         color: $main
   &__logo
     @extend .col-md-3
+    .second-app &
+      @extend .col-md-2
     @extend .col-4
     @extend .d-flex
     @extend .justify-content-center
     @extend .align-items-center
     cursor: pointer
-    img
+    img.img
       width: 70%
 
 
@@ -502,7 +517,8 @@ $dropdown-transition: .3s
 .dropdown
   width: 100%
   border-top: $border
-  // border-bottom: $border
+  .second-app &
+    margin-bottom: -$border-width
   @extend .d-flex
   @extend .flex-column
   &__title
@@ -511,11 +527,15 @@ $dropdown-transition: .3s
     cursor: pointer
     padding-left: $off-len
     padding-right: $off-len
+    .second-app &
+      border-bottom: $border
     &__text
       display: inline-block
       font-size: calc(80rem / 33)
       @include media-breakpoint-down(sm)
         font-size: calc(36rem / 33)
+        .second-app &
+          font-size: calc(60rem / 33)
       line-height: 1.25
       padding-top: calc(50rem / 33)
       padding-bottom: calc(50rem / 33)
@@ -615,7 +635,6 @@ $dropdown-transition: .3s
     img
       width: 100%
       height: auto
-
 
 
 .video
@@ -787,9 +806,14 @@ $dropdown-transition: .3s
       @extend .d-none
       &__video
         margin-top: calc(55rem / 33)
+        margin-bottom: calc(68rem / 33)
         width: 70%
+        height: auto
         position: relative
         z-index: 30
+        svg
+          width: 0
+          height: 0
         .video
           position: relative
           z-index: 30
@@ -799,14 +823,15 @@ $dropdown-transition: .3s
           content: ''
           position: absolute
           width: 100%
-          height: 100%
         &::after
           top: 0
           left: 0
           z-index: 50
+          height: 100%
         &::before
-          top: calc(2rem / 33)
+          top: calc(22rem / 33)
           left: calc(158rem / 33)
+          padding-top: calc(100% / 516 * 745)
           z-index: 20
           background-image: url(./img/Main2/frame.svg)
           background-position: center
@@ -823,3 +848,93 @@ $dropdown-transition: .3s
 .leaflet-container
   height: calc(592rem / 33)
   z-index: 10
+
+
+
+.paragraph
+  &--row
+    @extend .row
+  &--column
+    @extend .d-flex
+    @extend .flex-column
+  &--img-first
+    // @extend .flex-column
+    .paragraph__text
+      @extend .mt-5
+  &--text-first
+    @extend .flex-column-reverse
+    .paragraph__img
+      @extend .mt-5
+  &--header
+    @extend .justify-content-around
+    @extend .align-items-center
+    padding-top: calc(74rem / 33)
+    padding-bottom: calc(103rem / 33)
+  &__img
+    .paragraph--row:not(.paragraph--header) &
+      @extend .col-2
+    .paragraph--row.paragraph--header &
+      @extend .col-3
+    img.img
+      width: 100%
+      height: auto
+    &--circle
+      border-radius: 100%
+      overflow: hidden
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+      .video
+        padding-top: 100%
+        transform: scale(1.05)
+  &__text
+    &__title
+      font-family: 'Futura New'
+      font-size: calc(41rem / 33)
+      @extend .mb-4
+    &__tagline
+    &__text
+      font-size: calc(37rem / 33)
+    .paragraph--header &
+      @extend .col-4
+      @extend .d-flex
+      @extend .flex-column
+      @extend .align-items-end
+      &__title
+        @extend .mb-0
+        font-family: 'Spectral', sans-serif
+        font-size: calc(150rem / 33)
+        letter-spacing: -.4px
+        line-height: 1
+      &__tagline
+        font-size: calc(47rem / 33)
+        font-family: 'Futura New'
+
+
+
+.inspiration
+  border-left: $border
+  border-right: $border
+  border-bottom: $border
+  &__paragraphs
+    @extend .d-flex
+    @extend .flex-wrap
+    &__item
+      padding-top: calc(#{$col-len} / 2 - #{$off-len})
+      padding-right: calc(#{$off-len})
+      padding-bottom: calc(#{$col-len} / 2)
+      padding-left: calc(#{$col-len} / 2 + #{$off-len})
+      &--half
+        width: 50%
+        &:nth-child(odd)
+          border-right: $border
+        @include media-breakpoint-down(sm)
+          width: 100%
+          &:nth-child(odd)
+            border-right: 0
+          

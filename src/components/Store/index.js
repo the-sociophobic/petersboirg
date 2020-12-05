@@ -1,6 +1,7 @@
 import React from 'react'
 
 import flatten from 'utils/flatten'
+import deflatten from 'utils/deflatten'
 import addNewLines from 'utils/addNewLines'
 import arrayToLocale from './arrayToLocale'
 import defaultMessages from './defaultMessages'

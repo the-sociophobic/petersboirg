@@ -1,5 +1,6 @@
 import _ from 'lodash'
 
+
 const isJSON = obj =>
   obj.constructor === ({}).constructor
 

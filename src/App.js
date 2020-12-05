@@ -36,13 +36,13 @@ export default class App extends React.Component {
     super(props)
 
     const currentPage = window.location.pathname.replace('/', '')
-    // const secondApp = (new URLSearchParams(window.location.pathname)).has('second-app')
     const secondApp = (window.location.search.includes('second-app'))
     const pages = secondApp ? pages2 : pages1
 
     this.state = {
       secondApp: secondApp,
-      page: Object.keys(pages).includes(currentPage) ? currentPage : "main",
+      // page: Object.keys(pages).includes(currentPage) ? currentPage : "main",
+      page: "inspiration",
       pages: pages,
     }
   }
