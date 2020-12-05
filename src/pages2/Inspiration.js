@@ -1,5 +1,5 @@
 import React from 'react'
-import _, { drop } from 'lodash'
+import _ from 'lodash'
 
 import {
   FormattedMessage,
@@ -10,6 +10,7 @@ import Paragraph from 'components/Paragraph'
 import Dropdown from 'components/Dropdown'
 import getAttribsFrom from 'utils/getAttribsFrom'
 import deflatten from 'utils/deflatten'
+import notEmpty from 'utils/notEmpty'
 
 
 class Inspiration extends React.Component {
@@ -35,17 +36,18 @@ class Inspiration extends React.Component {
               {dropdown.paragraphs &&
                 _.transform(dropdown.paragraphs, (res, value, key) => res.push(value), [])
                   .map(paragraph =>
-                    <div
-                      className={`inspiration__paragraphs__item ${(paragraph.imgTop || paragraph.imgBottom) && "inspiration__paragraphs__item--half"}`}
-                    >
-                      <Paragraph
-                        {...
-                          _.mapValues(
-                            paragraph,
-                            (value, key) =>
-                              key === "img" && value ? `Inspiration/${value}` : value)}
-                      />
-                    </div>
+                    (notEmpty(paragraph.title) || notEmpty(paragraph.text) || notEmpty(paragraph.img)) &&
+                      <div
+                        className={`inspiration__paragraphs__item ${(paragraph.imgTop || paragraph.imgBottom) && "inspiration__paragraphs__item--half"}`}
+                      >
+                        <Paragraph
+                          {...
+                            _.mapValues(
+                              paragraph,
+                              (value, key) =>
+                                key === "img" && value ? `Inspiration/${value}` : value)}
+                        />
+                      </div>
                   )
               }
             </div>

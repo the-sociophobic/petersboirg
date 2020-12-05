@@ -42,7 +42,7 @@ export default class App extends React.Component {
     this.state = {
       secondApp: secondApp,
       // page: Object.keys(pages).includes(currentPage) ? currentPage : "main",
-      page: "inspiration",
+      page: "programs",
       pages: pages,
     }
   }

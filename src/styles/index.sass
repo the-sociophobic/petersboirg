@@ -492,6 +492,9 @@ html
       @extend .col-lg-2
       @extend .col-md-3
       @extend .col-4
+      .second-app &
+        @extend .col-lg-3
+        @extend .col-md-4
       @extend .text-center
       // padding-left: calc(70rem / 33)
       // padding-right: calc(70rem / 33)
@@ -532,6 +535,8 @@ $dropdown-transition: .3s
     &__text
       display: inline-block
       font-size: calc(80rem / 33)
+      .second-app &
+        color: $footer-light
       @include media-breakpoint-down(sm)
         font-size: calc(36rem / 33)
         .second-app &
@@ -854,17 +859,35 @@ $dropdown-transition: .3s
 .paragraph
   &--row
     @extend .row
+    @extend .d-flex
+    @extend .flex-row
+    padding-top: calc(#{$col-len} / 2)
+    padding-right: calc(#{$off-len} * 2)
+    padding-bottom: calc(#{$col-len} / 2)
+    padding-left: calc(#{$col-len} / 2)
+    @extend .justify-content-between
+    .paragraph__text
+      @extend .col-5
   &--column
     @extend .d-flex
     @extend .flex-column
+    @extend .justify-content-between
+    @extend .align-items-center
+    @extend .flex-grow-1
   &--img-first
-    // @extend .flex-column
+    .paragraph__img
+      @extend .order-1
     .paragraph__text
+      @extend .order-2
+    .paragraph__img + .paragraph__text
       @extend .mt-5
   &--text-first
-    @extend .flex-column-reverse
     .paragraph__img
-      @extend .mt-5
+      @extend .order-2
+    .paragraph__text
+      @extend .order-1
+    .paragraph__img ~ .paragraph__text
+      @extend .mb-5
   &--header
     @extend .justify-content-around
     @extend .align-items-center
@@ -872,7 +895,13 @@ $dropdown-transition: .3s
     padding-bottom: calc(103rem / 33)
   &__img
     .paragraph--row:not(.paragraph--header) &
-      @extend .col-2
+      width: 27.27%
+      padding-top: 27.27%
+      img.img
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
     .paragraph--row.paragraph--header &
       @extend .col-3
     img.img
@@ -899,12 +928,13 @@ $dropdown-transition: .3s
       @extend .mb-4
     &__tagline
     &__text
+      // @extend .col-5
       font-size: calc(37rem / 33)
     .paragraph--header &
-      @extend .col-4
+      @extend .col-5
       @extend .d-flex
       @extend .flex-column
-      @extend .align-items-end
+      //@extend .align-items-end
       &__title
         @extend .mb-0
         font-family: 'Spectral', sans-serif
@@ -914,7 +944,14 @@ $dropdown-transition: .3s
       &__tagline
         font-size: calc(47rem / 33)
         font-family: 'Futura New'
-
+  &__oi
+    @extend .order-3
+    width: 11.11%
+    padding-top: calc(11.11% * 77 / 82)
+    background-image: url(./img/Main2/oi.svg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
 
 
 .inspiration
@@ -925,16 +962,39 @@ $dropdown-transition: .3s
     @extend .d-flex
     @extend .flex-wrap
     &__item
+      @extend .d-flex
       padding-top: calc(#{$col-len} / 2 - #{$off-len})
       padding-right: calc(#{$off-len})
       padding-bottom: calc(#{$col-len} / 2)
       padding-left: calc(#{$col-len} / 2 + #{$off-len})
+      &:last-child
+        border-top: $border
+      &:nth-child(2)
+        border-top: 0
       &--half
         width: 50%
-        &:nth-child(odd)
-          border-right: $border
+        &:nth-child(even)
+          border-left: $border
+        &:nth-child(2)
+          border-left: $border !important
+        &:last-child
+          border-left: 0
         @include media-breakpoint-down(sm)
           width: 100%
-          &:nth-child(odd)
-            border-right: 0
+          border-left: 0
           
+
+
+.inspiration__paragraphs__item:last-child ~ .inspiration__paragraphs__item--half
+  border-top: $border
+
+
+
+
+.programs
+  &__voyagers
+    .paragraph--header .paragraph__text__title
+      font-size: calc(105rem / 33)
+    .paragraph--row
+      @extend .align-items-center
+  &__programs

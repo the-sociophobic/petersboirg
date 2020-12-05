@@ -231,51 +231,238 @@ const defaultMessages = {
             title: ["Встреча рассвета на венецианской яхте", "Venise du Nord", "Northern Veniсe"],
             text: ["Проснуться, когда все еще спят, пройти по свежим пустынным улицам, сесть на венецианскую яхту, которая увезет вас по нежно-дымчатым каналам встречать рассвет один на один с городом.", "Le romantisme de Saint Pétersbourg s’exprime par son emplacement extraordinaire : la ville est bordée par la mer Baltique et traversée par la grande Néva. Les courbes des petits fleuves et des canaux qui serpentent dans ville s’incorporent harmonieusement dans la régularité des rues.\nConstituée de plusieurs îles, de dimensions différentes, la ville offre une grande diversité au niveau de l’architecture qui se ressent également dans les modes de vie. Imaginez combien de ponts relient les îles et les quartiers. Pendant la saison de navigation, profitez d’un voyage en bateau à la journée pour ressentir profondément la nature de Saint Pétersbourg ou dans la nuit pour assister au miracle des ponts qui s’ouvrent.", "The extraordinary location of Saint Petersburg is translated into its romanticism: the city is bordered by the Baltic Sea and is crossed by the Neva river. And the curves of the small rivers and canals are incorporated harmoniously into the city regularity.\nSituated on the numerous, different sized islands, the city offers the large diversity of architectural styles that reflects also on the citizens’ lifestyle. Try to imagine how many bridges connect the islands and the districts. During the navigation season profit a boat trip, to enjoy the charming city framework in daytime or to participate at the miracle of the moving bridges at night."],
           },
+          last: {
+            imgTop: [false, true, true],
+            img: ["4.jpg", "9.jpg", "9.jpg"],
+          },
+          last2: {
+            imgTop: [false, true, true],
+            img: ["", "10.jpg", "10.jpg"],
+          }
         }
       },
       Famous: {
         title: ["Музеи", "Personnages célèbres", "Famous personages"],
+        paragraphs: {
+          romanov: {
+            imgTop: [true, true, true],
+            img: ["5.jpg", "7.jpg", "7.jpg"],
+            title: ["Эрмитаж ночью", "Les Romanov", "Romanov Family"],
+            text: ["Представьте – оказаться наедине с великим музеем. Таинственные залы Зимнего дворца, роскошь императорских покоев, мировые шедевры – Рафаэль, Леонардо, Рембрандт. Эрмитаж, двери которого откроются специально для вас.", "L’histoire de Saint Pétersbourg, de sa fondation en 1703, à l’année 1917 est étroitement liée avec la Maison impériale des Romanov. Les empereurs et les impératrices, les grands-ducs et les grandes-duchesses ont largement contribué à l’élaboration de la culture pétersbourgeoise, des arts, de la science, de l’éducation et dans la création de nombreuses manufactures. Durant cette période, de nombreuses Résidences et Palais impériaux ont été construits : (Péterhof, Tsarskoyé Sélo, le Palais d’Hiver, le Palais d’Eté, le Palais Mikhailovsky…). Et les collections riches des chefs-d’œuvre (documents, tableaux, pièces de mobilier, gravures, porcelaine, photos) dévoilant le faste impérial et la vie quotidienne de la Grande Famille ont été conservés. Laissez-vous plonger dans la belle époque des Tsar et Tsarines à Saint Pétersbourg.", "The history of Saint Petersburg, from its foundation in 1703 to the year 1917, is closely connected with the Imperial House of Romanov’s mark. The Emperors and Empresses, the Grand Dukes and Grand Duchesses contributed greatly to developing the city culture, the art, the science, the education and the production. During this period, the numerous Imperial Residences and Palaces were constructed (Peterhof, Tsarskoye Selo, the Winter Palace, The Summer Palace, The Mikhailovsky Castle…). And the rich collections of chefs-d’œuvre illustrating the grand royal and daily lives of the Family were conserved (documents, paintings, pieces of furniture, engraving, porcelain, photos). Let yourselves plunge into the belle époque of Tsars and Tsarinas in Saint Petersburg."],
+          },
+          peter: {
+            imgBottom: [true, true, true],
+            img: ["6.jpg", "31.jpg", "31.jpg"],
+            title: ["Главный штаб с хранителем музея", "Pierre le Grand : le rêve d’un paradis", "Peter the Great: dreams of paradise"],
+            text: ["Другой Эрмитаж в сопровождении научного сотрудника – экскурсия о живописи импрессионизма в самом современном музее Петербурга. В минималистичных интерьерах Главного штаба – парижская нежность Моне, таитянская страсть Гогена, деревенская поэзия Ван Гога, «кубистическая тайнопись» Пикассо и танцы Матисса.", "Par sa situation stratégique et son ouverture sur la mer Baltique, ce territoire nordique et marécageux, a inspiré le souverain russe Pierre le Grand, visionnaire et réformateur. Il a projeté la nouvelle ville, son « paradis », nouvelle capitale « anti-Moscou » qui immortaliserait son nom et symboliserait son règne. Il a eu envie de créer la meilleure ville du monde, en imitant beaucoup Amsterdam et d’autres villes européennes développées. La construction a débuté sans plan précis, au hasard des caprices du souverain, et les paysans de tout le pays ont travaillé pour la construction de la ville sous la surveillance de soldats en arme.La cité de Saint Pétersbourg a été fondée le 16 mai 1703 et 10 ans après elle a été déjà désignée comme la nouvelle capitale.", "These northern and marsh lands bordering on the Baltic Sea inspired Peter the Great, Russian sovereign, visionary and reformer, by its strategic location. He designed a new city, his «paradise», new «anti-Moscow» capital that could immortalize his name and symbolize his reign. He had an ambition to create the best city in the world imitating much Amsterdam and other old European cities. The construction started without any precise plan by caprices of the Tsar, and the peasants from the whole country were working for this ambitious project under the control of armed soldiers. The city of Saint Petersburg was founded the 16th of May 1703 and in 10 years it was already designated as the new capital of Russia."],
+          },
+          none: {
+            imgTop: [true, true, true],
+            img: ["7.jpg", "32.jpg", "32.jpg"],
+            oi: [true, false, false],
+          },
+          felix: {
+            imgBottom: [true, true, true],
+            img: ["8.jpg", "", ""],
+            title: ["Временные выставки", "Félix Yousoupoff", "Felix Yusupov"],
+            text: ["Имена, которые у всех на слуху. Новые взгляды на знаменитые произведения. Отечественные и зарубежные «гости» Северной столицы. Стать участниками актуальных событий культурной жизни, посетив временную выставку в «Манеже», Музее Фаберже, «Эрарте», Русском музее или частной галерее.", "Le duc Yousoupoff, ses richesses, ses palais, ses frasques. L’enfant terrible né à Saint Pétersbourg dans une famille réputée, est devenu très tôt l’unique héritier de toute la fortune des Yousoupoff. En se battant contre la force sataniste et la malchance de la famille de Nicolas II, Félix s’est fait connaître comme l’un des principaux participants à l’assassinat de Raspoutine. Après la Révolution d’Octobre, ayant perdu toutes les richesses familiales, Félix et sa femme se sont exilés à Paris où ils ont vécu jusqu’à leur mort.", "The duke Yusupov, his richness, his palaces, his pranks. Born in Saint Petersburg at the most reputed family, the enfant terrible became very early the only heir of the entire Yusupov’s fortune. Struggling against the satanist power and miseries of the Royal Family, Felix is known as one of the main participants of the Rasputin’s assassination. After the October Revolution, having lost all the family wealth, Felix and his wife escaped out of the country to Paris where they were living until their death."],
+            oi: [false, true, true],
+          },
+          last: {
+            imgTop: [true, false, false],
+            img: ["9.jpg", "4.jpg", "4.jpg"],
+          },
+          last2: {
+            imgTop: [true, false, false],
+            img: ["10.jpg", "", ""],
+          }
+        }
       },
       Significant: {
         title: ["Императорский загород", "Faits historiques marquants", "Significant facts of history"],
+        paragraphs: {
+          assassination: {
+            imgBottom: [true, true, true],
+            img: ["11.jpg", "12.jpg", "12.jpg"],
+            title: ["Петр I и его парадиз", "Assassinat de Raspoutine", "Assassination of Rasputin"],
+            text: ["Утренние улицы и прогулка до пристани, откуда по Финскому заливу отправиться в Петергоф. Полчаса на метеоре – и мы в Русском Версале. Включение фонтанов и экскурсия по Нижнему парку на гольфкарах. В подземелье Гротов Большого Каскада изучить фонтанную систему изнутри. Или найти среди 30 петергофских музеев то, что близко: придворные интриги, загадочная символика игральных карт или, может быть, мода барокко?", "L’enquête sur l’un des crimes les plus révoltants, empli de mystères. D’ailleurs, on sait que l’assassinat de Raspoutine a précipité la chute des Romanov. S’interroger sur comment le moujik russe sibérien a réussi à s’introduire dans la meilleure société de Saint Pétersbourg, jusqu’à être admis dans l’intimité de la famille impériale. Ecouter les opinions autour de l’influence de Raspoutine sur le Tsar et la Tsarine et son intention sur la mainmise sur l’empire. Visiter le sous-sol du beau Palais Yousoupoff pour se trouver sur la scène du crime et ressentir les frissons d’une expérience vibrante.", "The investigation of one of the most shocking crimes, full of mysteries. Besides, it’s known that Rasputin’s assassination triggered to the overthrow of the Romanovs. Explore how the Russian moujik from Siberia managed to enter the high society of Saint Petersburg up to the royal intimate family business. Follow the opinions of Rasputin’s influence on the Tsar and Tsarina and his intention to seize the power. Visit the downstairs of the magnificent Yusupov Palace to find yourselves at the crime scene that makes shiver."],
+          },
+          revolution: {
+            imgTop: [true, true, true],
+            img: ["12.jpg", "25.jpg", "25.jpg"],
+            title: ["Новое Царское село", "Révolution Russe", "Russian Revolution"],
+            text: ["Посетить музыкальный вокзал и полюбоваться национальным достоянием, Янтарной комнатой, в грандиозном Екатерининском дворце. А после обеда в замке императора Павла вспомнить школьные годы в лицее Пушкина, раскрыть секреты реставрации в янтарных мастерских или познакомиться с единственными в своем роде шедевром, Агатовыми комнатами.", "C’est à Saint Pétersbourg que la Grande Révolution Russe a commencé, mettant fin à la monarchie Romanov, au profit de l’ère soviétique. Découvrir cette période historiquement riche/intense qui a bouleversé la vie de tout le pays et comprendre les répercussions sur la vie du peuple que l’on ressent encore aujourd’hui. Exposer la différence entre la vie impériale et soviétique à Saint Pétersbourg et mieux comprendre la mentalité russe.", "This is right here, in Saint Petersburg, where the Grand Russian Revolution started, bringing the end to the monarchy of Romanovs and signalling the start of the soviet era. Reveal this historically intensive period that turned around the life of the whole country and find out the after-effects that one can feel in the today’s way of living. Note the impacts of the imperial time and the soviet period to understand better the Russian mentality."],
+          },
+          leningrad: {
+            imgBottom: [true, true, true],
+            img: ["13.jpg", "", ""],
+            title: ["Кронштадт", "Siège de Leningrad", "The siege of Leningrad"],
+            text: ["Масштабы портовой части города, там, где Нева впадает в Финский залив, и растет Петербург 21 века. Грандиозность дамбы, защищающей город от наводнений. Непокоренные кронштадтские форты и крупнейший в России морской собор.", "L’histoire de Saint Pétersbourg n’a pas toujours été heureuse. Le Siège de Léningrad a taillé une place considérable dans l’histoire de ville et nous ne pouvons pas négliger ce thème. Apprendre la vérité sur la vie quotidienne sous occupation, comprendre comment la Route de Vie s’est organisée et a fonctionné et dévoiler les habitudes péterbourgeoises traditionnelles, fruits de cette terrible période.", "The destiny of Saint Petersburg has not been always in the roses. The Siege of Leningrad is an important landmark in the city history and we can’t ignore this theme. Learn the true facts of the daily life under occupation, find out how the Road of Life was functioning and reveal the today’s habits of local citizens, fruits of this terrible period."],
+            oi: [false, true, true],
+          },
+          church: {
+            imgBottom: [true, true, true],
+            img: ["14.jpg", "24.jpg", "24.jpg"],
+            oi: [true, false, false],
+          },
+          sphinks: {
+            imgTop: [true, true, true],
+            img: ["15.jpg", "15.jpg", "15.jpg"],
+          },
+          bridge: {
+            imgTop: [true, true, true],
+            img: ["16.jpg", "16.jpg", "16.jpg"],
+          },
+        }
       },
       AroundBallet: {
         title: ["Балет", "Autour des ballets ", "Around the ballet"],
+        paragraphs: {
+          pointe: {
+            imgBottom: [true, true, true],
+            img: ["17.jpg", "17.jpg", "17.jpg"],
+            title: ["Петербург на Пуантах", "Saint Pétersbourg sur les pointes", "Saint Petersburg en pointe"],
+            text: ["Проникнуться высокой петербургской культурой: побывать за кулисами старинного театра, попробовать десерт Дианы Вишневой. Посетить спектакль из нашумевших театральных премьер или признанной классики. Традиционно насладиться шампанским и красной икрой в антракте. И не только узнать о театральной жизни Петербурга, но и попробовать себя у хореографического станка.", "Saint Pétersbourg a vu naître la fameuse » Marque » et l’école mondialement réputée du Ballet Russe. Passez une soirée dans un des théâtres connus et profitez pendant l’entracte de la tradition :  savourez une coupe de champagne et déguster du caviar rouge.\nFaites connaissance avec toute une vie cachée, dans les coulisses du théâtre illustre. Goûtez le dessert « Diana Viсhneva » servi uniquement dans la ville natale de l’Etoile.", "Saint Petersburg gave birth to the famous brand and the worldwide known school of the Russian Ballet. Spend an evening at one of the reputed theatres and profit an intermission to follow the local tradition of a glass of сhampagne and a bit of red caviar. Reveal the whole life behind the celebrated scenes hidden from the eyes.\nEnjoy the dessert «Diana Vishneva» served uniquely in the native city of the Etoile."],
+          },
+          hotel: {
+            imgBottom: [true, true, true],
+            img: ["18.jpg", "18.jpg", "18.jpg"],
+            oi: [true, true, true],
+          },
+          last: {
+            imgTop: [false, true, true],
+            img: ["19.jpg", "22.jpg", "22.jpg"],
+          },
+          last2: {
+            imgTop: [true, true, true],
+            img: ["", "23.jpg", "23.jpg"],
+          },
+        }
       },
       AroundArtists: {
         title: ["Художники и писатели", "Autour des artistes et écrivains", "Around the famous artists"],
+        paragraphs: {
+          tchaikovsky: {
+            imgBottom: [true, true, true],
+            img: ["20.jpg", "35.jpg", "35.jpg"],
+            title: ["Белые Ночи Достоевского", "Symphonie de Tchaikovsky", "Tchaikovsky’s symphony"],
+            text: ["Петербург как действующее лицо, как собеседник и творец. Какой он – город Пушкина, Достоевского, Гоголя? Жестокий и фантастичный, великолепный и грозный, справедливый и свободный, а, может быть, напыщенный и смешной? Заглянуть в сумрак дворов-колодцев, прочувствовать скромный быт доходных домов, отыскать места любимых героев – на грани литературного и реального миров.", "La période péterbourgeoise a influencé sensiblement la vie du compositeur de génie russe Pyotr Ilyich Tchaikovsky. C’est sur les scènes principales de Saint Pétersbourg où les premières de ses œuvres les plus importantes ont lieu.\nSuivre les liens entre la biographie de la personnalité forte et le caractère impérial de la ville. Terminez le voyage par une soirée au théâtre Mariinsky envouté par « Le lac des cygnes » ou au Philarmonie de Pétersbourg enchanté par la Symphonie numéro 6 « Pathétique ».", "The Petersburg’s period influenced much the life of the Russian brilliant composer Pyotr Ilyich Tchaikovsky. His most important pieces were premiered on the main stages of Saint Petersburg.\nFigure out the strong personal history that took place in the city of the royal character. Complete your trip with an evening to enjoy the «Swan Lake» ballet at the Mariinsky theatre or the Symphony number 6 «Pathetic» - at the Saint Petersburg State Academic Philharmonic."],
+          },
+          dostoevsky: {
+            imgTop: [true, true, true],
+            img: ["21.jpg", "20.jpg", "20.jpg"],
+            title: ["Неизвестный Репин", "« Les nuits blanches » de Dostoevsky", "«White nights» by Dostoevsky"],
+            text: ["Насладиться экскурсией по Русскому музею и уехать загород, в Репино – бывшую финскую «Куоккалу». Посетить Пенаты, уютное имение художника: дом и мастерскую, некогда принимавших талантливых гостей, пройтись по тенистому саду. И выйти к ветреному заливу – любимому месту отдыха петербуржцев сейчас – и 100 лет назад.", "L’image de Saint Pétersbourg actuelle est souvent associée à travers la vision de la ville dans les œuvres de Fyodor Mikhailovich Dostoevsky. C’est la ville qui diffuse, à côté de la beauté éternelle, la mélancolie persistante, le long sommeil, le froid glacial… la folie. Faire une promenade littéraire pour voir l’envers de Pétersbourg, désordonné et inspirant en même temps, comme décrit dans le roman « Les nuits blanches ».\nEntrez dans les cours cachées pour mieux comprendre le chaos et le désespoir dans les âmes des héros de l’écrivain sensible.", "The actual image of Saint Petersburg is often associated with the ambience that prevails in the masterpieces of Fyodor Mikhailovich Dostoevsky. It’s the city that transmits, alongside with the eternal beauty, the persistent melancholy, the long sleep, the deadly cold… the madness. Make a literature tour to see the Petersburg’s dark side, disorderly and inspiring at the same time, recognizable at the «White Nights» story. Enter the hidden yards to understand better chaos and hopelessness in the souls of Dostoevsky’s heroes."],
+          },
+          realism: {
+            imgTop: [true, true, true],
+            img: ["22.jpg", "", ""],
+            oi: [false, true, true],
+            title: ["", "Les tableaux de Répine :  réalisme russe", "Painting of Repin: Russian realism"],
+            text: ["", "Membre académicien de l’Académie impériale des Beaux-Arts de Saint Pétersbourg, peintre russe célèbre, Répine est la figure clé du réalisme russe.\nEn travaillant comme peintre d’histoire et de scènes de genre et ayant une galerie des portraits de ses contemporains, Répine a créé une « encyclopédie de la Russie d'après l'abolition du servage ».\nAprès 1918, quand la ville de Kuokkala, où se trouvait la dernière maison du peintre, devient territoire finlandais, Répine est coupé de la Russie.\nVoir les peintures emblématiques du Musée Russe, comme : « Les Bateliers de la Volga », « Les Cosaques zaporogues écrivant une lettre au Sultan de Turquie », « Session protocolaire du Conseil d’État ». Visiter la maison « russe – finlandaise » de Répine au village éponyme Répino (ex-Kuokkala), endroit merveilleux au bord du golfe de Finlande.", "Member of the Saint Petersburg Imperial Academy of Arts, known Russian painter, Ilya Yefimovitch Repin is a key figure of the Russian realism.\nHaving worked as a history painter and a painter of genre scenes, having had a gallery of portraits of his contemporaries, Repin created the whole «encyclopedia of Russia after the abolition of serfdom».\nIn 1918 when the town of Kuokkala, the last home place, became the territory of Finland, Repin was cut off from Russia.\nSee the emblematic paintings preserved at the Russian Museum such as: «Barge Haulers on the Volga», «Reply of the Zaporozhian Cossacks to Sultan Mehmed IV of the Ottoman Empire», «Ceremonial Sitting of the State Council». Visit the Russian-Finnish house of Repin at the town of the same name Repino (ex-Kuokkala), amazing place on the coast of the Gulf of Finland."],
+          },
+          last: {
+            imgTop: [true, true, true],
+            img: ["23.jpg", "21.jpg", "21.jpg"],
+          },
+          last2: {
+            imgTop: [true, false, false],
+            img: ["", "19.jpg", "19.jpg"],
+          },
+        }
       },
       AroundArt: {
         title: ["История", "Autour des arts : musées", "Around the art: museums"],
+        paragraphs: {
+          hermitage: {
+            imgBottom: [true, true, true],
+            img: ["24.jpg", "5.jpg", "5.jpg"],
+            title: ["Блокада Ленинграда", "L’Ermitage : l’incontournable Louvre russe", "Hermitage Museum: must-see"],
+            text: ["Прочувствовать, чем жили простые люди в оккупированном городе. Услышать мощные аккорды Седьмой симфонии Шостаковича. Поклониться памятным ленинградцам местам и прикоснуться к спасенным и воссозданным драгоценностям, гордости российской реставрации.", "Saint Pétersbourg recèle une des plus grandes collections d’œuvres d’art au monde.\nLe Musée de l’Ermitage est un espace infini d’arts (trois millions d’objets) qui unie plusieurs salles, allant de la peinture hollandaise et de flandres, à l’art antique de l’Eurasie et de la Sibérie, des portraits de la famille Romanov et beaucoup d’autres thématiques.\nTrouvez le patrimoine culturel mondial caché au cœur du musée : les collections solides de Rembrandt et de Rubens, la « Madonna Benois » de Léonard de Vinci, « Le Joueur de luth » de Caravage…\nFaites connaissance avec la collection des impressionnistes et post-impressionnistes au Palais de l’Etat-Major, deuxième bâtiment du Musée d’Ermitage.", "Saint Petersburg preserves one of the largest collections of art masterpieces in the world.\nThe State Hermitage Museum is an infinite space of art (three million of objects) that unites numerous halls, from the Dutch and Flemish Art to the Antient Art of Eurasia and Siberia, portraits of the Romanov Family and many other themes.\nFind the world cultural heritage hidden in the heart of the museum: solid collections of Rembrandt and Rubens, «Madonna Benois» by Leonardo da Vinci, « Lute Player» by Caravaggio…\nTake pleasure from watching the collection of impressionists and post-impressionists at the General Staff Building, second building of the Hermitage Museum."],
+          },
+          voyage: {
+            imgTop: [true, true, true],
+            img: ["25.jpg", "8.jpg", "8.jpg"],
+            title: ["Убийство Распутина и русская революция", "A la découverte de l’Art russe", "Russian Art: voyage of discovery"],
+            text: ["Подвалы роскошного дворцы Юсуповых и одиночество последнего императора, серебряные палубы «Авроры» и горячие строки молодого Маяковского, придворные заговоры и «рабочий» Петроград. Приоткрыть тайны самого противоречивого периода, погрузившись в город, навсегда перевернувшего мировую историю.", "La plus grande collection de la peinture russe à Saint Pétersbourg est conservée au Musée Russe. C’est le premier musée d’Etat consacré à l’art russe. Il a été projeté par l’empereur pro-russe Alexandre III et a été ouvert par son fils Nicolas II.\nLe musée :  le bâtiment principal se situe au Palais Mikhailovsky, monument significatif de l’architecture impériale, il est entouré par les jardins Mikhailovsky et d’Eté. Toutes les périodes et les écoles de la peinture russe y sont représentés.\nLe Musée Russe abrite constamment de grandes expositions thématiques.", "The biggest collection of Russian paintings in Saint Petersburg is stored at the Russian Museum, the first State Museum dedicated to the Russian Art. It was projected by the pro-Russian Emperor Alexander, III and it was opened by his son Nicolas, II.\nThe museum: the main building occupies the Mikhailovsky Palace, significant monument of the imperial architecture, surrounded by the Mikhailovsky and the Summer Gardens. The collection covers all the periods and schools of the Russian painting.\nMoreover, the Russian Museum hosts constantly great special exhibitions."],
+          },
+          jewelry: {
+            imgBottom: [true, true, true],
+            img: ["26.jpg", "", ""],
+            oi: [false, true, true],
+            title: ["Тени Серебряного века", "Joaillerie : collections de bijoux et pièces uniques de Fabergé", "Jewelry: unique pieces"],
+            text: ["Петербург начала века: пьянящая близость перемен, громкие скандалы, великие любовные истории, провокационная музыка и новые рифмы. Полистать черновики Блока, выпить кофе в некогда шумном зале кабаре «Бродячая собака», заглянуть в ахматовские шкатулки и отдохнуть в тени садика «Фонтанного дома».  В городе, где даже стены помнят голоса тех, кто стал душой мятежной эпохи.", "Ouvrir la boîte à bijoux de Pétersbourg, pleine des pierres historiques.\nDécouvrez la collection ultra précieuse des bijoux dans les Réserves d’Or et de Diamants de l’Ermitage présentant les chefs-d’œuvre créés par les masters de différentes cultures et époques, y compris la collection de la Famille Impériale russe.\nAdmirez le musée Fabergé qui renferme la plus grande collection privée au monde de bijoux de production Fabergé, y compris 9 œufs originaux commandés par les Empereurs russes Alexandre III et Nicolas II, en cadeaux pour leurs femmes adorées.", "Open the jewelry box of Saint Petersburg, full of historical gemstones.\nDiscover most precious collection of the Treasure Gallery at the Hermitage Museum: the Gold and the Diamond Rooms where the masterpieces created by masters of different cultures and periods, are presented, including the collection of the Imperial Family.\nAdmire the Fabergé Museum that keeps the biggest private collection in the world of the Fabergé production pieces, in particular 9 original eggs ordered by the Russian Emperors Alexander, III and Nicolas II, as gifts for their adored wives."],
+          },
+          none: {
+            imgBottom: [true, true, true],
+            img: ["27.jpg", "6.jpg", "6.jpg"],
+            oi: [true, false, false],
+          },
+          last: {
+            img: ["28.jpg", "28.jpg", "28.jpg"],
+          },
+        }
       },
       Sport: {
         title: ["Спорт и природа", "Séjour sportif / nature", "Sport visit / nature"],
+        paragraphs: {
+          seascape: {
+            imgBottom: [true, true, true],
+            img: ["29.jpg", "13.jpg", "13.jpg"],
+            title: ["По Петербургу на каяках и сапах", "Décor maritime de la ville : le Golfe de Finlande", "Petersburg seascape: Gulf of Finland"],
+            text: ["Поддержать форму и объединить спорт и культуру, воспользовавшись возможностью совершить утреннее путешествие по центру города на каяках или сапах. Когда туристические теплоходы еще пришвартованы у причалов, Фонтанка, Мойка пусты и уютны, а мощь Невы можно прочувствовать буквально всем существом.", "Le Golfe de Finlande, bras de la mer Baltique, offre à Saint Pétersbourg une ouverture maritime et des axes de communications entre Helsinki et Tallinn.\nEn prenant un bateau de grande vitesse du quai à côté de l’Ermitage vous partirez au golf pour atteindre Péterhof, la Résidence impériale d’été, Versailles russe.\nPour percevoir l’atmosphère défensive du port militaire depuis l’époque de la Russie impériale, pour voir ou visiter des forts, plus grands que le légendaire Fort Boyard, privilégiez une escapade sur l’île de Kronstadt.\nOu évadez-vous pour aller au « Kurort », station balnéaire, populaire parmi les locaux (accès rapide et facile depuis le centre en train ou en voiture 30-40 min.) Сette station, entourée par la forêt nordique, permet de prendre un bain du soleil en été, de faire du ski de fond en hiver, de visiter la maison authentique de Répine.", "The Gulf of Finland of the Baltic Sea gives to Saint Petersburg the access to the sea and opens the direct seaways to Helsinki and Tallinn.\nTake a high-speed boat from the quay, close to the Hermitage Museum, to enter the Gulf and to reach Peterhof, the imperial summer residence, Russian Versailles.\nTo feel the atmosphere of the military port of the Imperial Russia, to see or to visit the forts bigger than the legendary Fort Boyard, plan your trip to the island of Kronstadt.\nOr experience an escape to the «Kurort», beach resort, popular among the locals (easy access from the city centre, 30-40 min. by train or by car). The resort surrounded by the northern forest offers the opportunities to take sun baths in summer, to ski in winter, to visit the authentic house of Ilya Repin.\n"],
+          },
+          karelia: {
+            imgTop: [true, true, true],
+            img: ["30.jpg", "30.jpg", "30.jpg"],
+            title: ["Карелия", "Carélie : la beauté sauvage de la Laponie Russe", "Karelia: savage beauty of Russian Lapland"],
+            text: ["Разбавить тур путешествием в русскую Финляндию. Дышать полной грудью в чистейших хвойных лесах, устроить рыбалку на берегу тихого озера, испытать себя в экстремальном рафтинге на каяках – для тела. Оценить искусность северных мастеров, посетить древний Валаамский монастырь и полюбоваться эрмитажным мрамором в карьере Рускеалы – для души.", "En complément de votre séjour à Saint Pétersbourg, venez à la rencontre des paysages exclusifs de la Laponie Russe.\nAux portes de Saint Pétersbourg, la forêt boréale, la petite Sibérie, conserve une nature sauvage et authentique. Les paysages forestiers du grand nord, côtoient les lacs au eaux translucides.\nQuiétude et harmonie règnent en maître et au détour d’un sentier, des villages à l’architecture classée au patrimoine mondial de l’Unesco, surprennent le voyageur, depuis le 17e siècle.", "To complete your trip to Saint Petersburg, go beyond the city to enjoy the unique landscapes of Karelia, Russian Lapland.\nOn the edge of Saint Petersburg region, the boreal forest, small Siberia, conserves the savage and authentic nature. The forest scenes of the great north are alternating with clearest waters of the lakes.\nThe atmosphere of calm and harmony, numerous eco tracks and routes, the villages of 17th century architecture under the patronage of UNESCO are to fascinate voyagers."],
+          },
+        }
       },
     }
   },
 
   Programs: {
-    voyagers: {
-      title: ["", "", ""],
-      tagline: ["", "", ""],
+    Voyagers: {
+      video: ["kRwefa-33YE", "kRwefa-33YE", "kRwefa-33YE"],
+      title: ["Путешественники", "Qui Voyage", "Voyagers"],
+      tagline: ["организовать поездку", "vous organisiez votre voyage", "organize your trip"],
 
-      Couple: {
-        title: ["", "", ""],
-      },
-      Family: {
-        title: ["", "", ""],
-      },
-      Friends: {
-        title: ["", "", ""],
-      },
-      School: {
-        title: ["", "", ""],
-      },
-      Works: {
-        title: ["", "", ""],
-      },
+      dropdowns: {
+        Couple: {
+          title: ["Вдвоем", "A deux", "Сouple"],
+          text: ["Побаловать друг друга временем для двоих, провести совместную фотосессию, порадовать ее ужином-сюрпризом на крыше, сделать предложение или отпраздновать годовщину первого поцелуя. Путешествие в самый романтичный город точно станет частью вашей особенной истории.", "S’évader à deux, s’offrir un espace-temps confidentiel pour fêter une occasion particulière (voyage de noce, anniversaires, une escapade amoureuse) quoi de mieux qu’un voyage romantique personnalisé qui s’inscrira dans votre histoire.", "Get away with your beloved one making time and special moments to each other (honeymoon, anniversaries, romantic escape). What could be better than a bespoke trip just for the two of you, to be a part of your private history."],
+          img: ["0.jpg", "0.jpg", "0.jpg"],
+          imgRight: [true, true, true],
+        },
+        Family: {
+          title: ["С семьей", "En famille", "Family"],
+          text: ["Хороший семейный отдых – это счастливое общее пространство, в котором есть место интересам и потребностям каждого. Прислушиваясь к желаниям всех членов команды, мы вместе разработаем путешествие, учитывающее темп семьи, подберем программу и музеи с учетом возраста детей.", "Les vacances en famille marquent des temps forts dans l’année. Pour des vacances en famille réussies il faut parvenir à combler les attentes de chacun et satisfaire les besoins de tous. A l’écoute de vos envies, nous élaborerons ensemble un voyage respectant les désirs et le rythme de chacun.", "Trips to share with family are significant moments in our lives.\nTo make sure a voyage is going smoothly, the expectations of everyone should be met and the common needs should be satisfied. Following your desires, we can create together a trip that respects the rhythm of every family member."],
+          img: ["1.jpg", "1.jpg", "1.jpg"],
+          imgLeft: [true, true, true],
+        },
+        Friends: {
+          title: ["Компанией", "Entre amis", "Friends"],
+          text: ["Мало ли можно придумать поводов, чтобы собраться вместе в Северной столице? Успешная сдача проекта, долгожданные «майские», девичник. А как же легендарное «защитить диплом – и рвануть в Питер»? Независимо от вашей особенной темы, самое главное, чтобы поездка стала теплым воспоминанием и вошла в хроники дружбы.", "Il y tellement d’occasions d’organiser un voyage entre amis : fin d’études, enterrement de vie de jeune fille/garçon, anniversaires de retrouvailles. Quelque soit la thématique choisie par le groupe, le maître mot est la convivialité, vivre des moments privilégiés spécialement conçus pour des souvenirs inoubliables et renforcer les liens d’amitié.", "There are so many occasions to organise a trip with friends: end of academic year, bachelorette/bachelor party, class reunion. Whatever the theme chosen, the essential is to provide a group with comfort of co-traveling and special moments to remember and to strengthen friendship."],
+          img: ["2.jpg", "2.jpg", "2.jpg"],
+          imgRight: [true, true, true],
+        },
+        School: {
+          title: ["Школьной группой", "Voyage scolaire ", "School trip"],
+          text: ["Школьные поездки остаются в памяти на всю жизнь. Наша задача – адаптировать поездку для молодых путешественников: не перегрузить датами и фактами, а заразить интересом к изучению истории, литературы и этикета; подобрать увлекательную досуговую программу.", "Pour un voyage scolaire dont on se souviendra toute la vie, il est essentiel pour nous d’adapter un séjour pour les jeunes voyageurs, prévoyant un programme équilibré entre excursions culturelles et activité de loisirs.", "School trips are once-in-a-lifetime experiences. It’s important for us to adapt a visit to the young voyagers, offering a balanced program of cultural excursions and leisure activities."],
+          img: ["3.jpg", "3.jpg", "3.jpg"],
+          imgLeft: [true, true, true],
+        },
+        Works: {
+          title: ["Корпоративной группой", "Comité d’entreprise/association", "Works committee/associations"],
+          text: ["Мы не только организуем прием, экскурсионную программу, питание в соответствии с вашими целями, бюджетом и темой поездки, но и добавим элементы тимбилдинга, предложим мастер-классы, игры, квесты для сплочения команды.", "Tout au long de l’année nous proposons aux comités d’entreprise des packages attractifs pour leurs salariés, allant du long week-end au voyage organisé.\nNos offres, sont également ouvertes aux associations.", "Throughout the year, we propose to works committees attractive travel packages to offer to their employers, from a long weekend to an organised tour.\nOur proposals are valid also for associations."],
+          img: ["4.jpg", "4.jpg", "4.jpg"],
+          imgRight: [true, true, true],
+        },
+      }
     },
-    programs: {
+    Programs: {
       title: ["", "", ""],
       tagline: ["", "", ""],
 
