@@ -14,12 +14,12 @@ class Programs extends React.Component {
         data={[
           {
             hash: "voyagers",
-            title: <FormattedMessage id="Programs.voyagers.title" />,
+            title: <FormattedMessage id="Programs.Voyagers.title" />,
             content: <Voyagers />,
           },
           {
             hash: "programs",
-            title: <FormattedMessage id="Programs.programs.title" />,
+            title: <FormattedMessage id="Programs.Programs.title" />,
             content: <Programs_ />,
           },
         ]}

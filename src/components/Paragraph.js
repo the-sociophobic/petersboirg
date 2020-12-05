@@ -12,6 +12,7 @@ class Paragraph extends React.Component {
 
     return (
       <div className={`paragraph ${align} ${order} ${this.props.header && "paragraph--header"}`}>
+        
         {(this.props.img || this.props.video) &&
           <div className={`paragraph__img ${this.props.circle && "paragraph__img--circle"}`}>
             {this.props.img && <Img src={this.props.img} />}

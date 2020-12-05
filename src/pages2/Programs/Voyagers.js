@@ -1,5 +1,5 @@
 import React from 'react'
-import _, { drop } from 'lodash'
+import _ from 'lodash'
 
 import getAttribsFrom from 'utils/getAttribsFrom'
 import deflatten from 'utils/deflatten'

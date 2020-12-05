@@ -493,6 +493,8 @@ html
       @extend .col-md-3
       @extend .col-4
       .second-app &
+        text-transform: lowercase
+        color: $font-color !important
         @extend .col-lg-3
         @extend .col-md-4
       @extend .text-center
@@ -930,6 +932,7 @@ $dropdown-transition: .3s
     &__text
       // @extend .col-5
       font-size: calc(37rem / 33)
+      font-weight: 200
     .paragraph--header &
       @extend .col-5
       @extend .d-flex
@@ -958,6 +961,10 @@ $dropdown-transition: .3s
   border-left: $border
   border-right: $border
   border-bottom: $border
+
+
+.inspiration,
+.programs__programs
   &__paragraphs
     @extend .d-flex
     @extend .flex-wrap
@@ -967,22 +974,25 @@ $dropdown-transition: .3s
       padding-right: calc(#{$off-len})
       padding-bottom: calc(#{$col-len} / 2)
       padding-left: calc(#{$col-len} / 2 + #{$off-len})
+      &--half
+        width: 50%
+        @include media-breakpoint-down(sm)
+          width: 100%
+          border-left: 0
+          
+
+.inspiration
+  &__paragraphs
+    &__item
       &:last-child
         border-top: $border
       &:nth-child(2)
         border-top: 0
       &--half
-        width: 50%
-        &:nth-child(even)
+        &:nth-of-type(even)
           border-left: $border
-        &:nth-child(2)
-          border-left: $border !important
         &:last-child
           border-left: 0
-        @include media-breakpoint-down(sm)
-          width: 100%
-          border-left: 0
-          
 
 
 .inspiration__paragraphs__item:last-child ~ .inspiration__paragraphs__item--half
@@ -998,3 +1008,43 @@ $dropdown-transition: .3s
     .paragraph--row
       @extend .align-items-center
   &__programs
+    .paragraph
+      &__img
+        width: 100%
+    &__paragraphs
+      &__item
+        border-top: $border
+        // padding-top: calc(#{$col-len} / 2 - #{$off-len})
+        padding-right: calc(#{$col-len} / 2)
+        // padding-bottom: calc(#{$col-len} / 2)
+        padding-left: calc(#{$col-len} / 2)
+        &:nth-of-type(2), &:nth-of-type(5)
+          @include media-breakpoint-up(md)
+            border-left: $border
+    &__pdf
+      width: 100%
+      height: calc(170rem / 33)
+      @extend .d-flex
+      @extend .justify-content-center
+      @extend .align-items-center
+      border-top: $border
+      &__text
+        font-size: calc(51rem / 33)
+        font-family: 'Futura New', sans-serif
+        color: $footer-light
+        a
+          font-family: 'Futura New', sans-serif
+          color: $footer-light
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          top: 50%
+          left: 0
+          transform: translate(-150%, -50%)
+          width: calc(116rem / 33)
+          height: calc(116rem / 33)
+          background-image: url(./img/Programs/Programs/pdf.svg)
+          background-position: center
+          background-repeat: no-repeat
+          background-size: contain

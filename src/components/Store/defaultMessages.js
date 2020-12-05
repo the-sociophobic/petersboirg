@@ -463,13 +463,52 @@ const defaultMessages = {
       }
     },
     Programs: {
-      title: ["", "", ""],
-      tagline: ["", "", ""],
+      title: ["Программы", "Programmes", "Programs"],
+      tagline: ["создать свой маршрут", "créez votre carnet de voyage", "plan your travel itinerary"],
+      video: ["UrzA1abr18Y", "UrzA1abr18Y", "UrzA1abr18Y"],
 
-      Autumn: {
-        
+      PDF: ["предложение ", "proposition ", "program proposal "],
+      
+      paragraphs: {
+        Autumn: {
+          name: ["Осень", "Automne", "Autumn"],
+          title: ["Осенью", "En automne", "Autumn"],
+          // text: [<><b>Сентябрь.</b> Новый театральный и музейный сезон<br /><b>Октябрь.</b> Золотая осень</>, <><b>Septembre.</b> Nouvelle saison théâtrale et culturelle<br /><b>Octobre.</b> Automne d’or. Période préférée de Poushkine</>, <><b>September.</b> New theatre and cultural season<br /><b>October.</b> Gold autumn. Favourite period of Pushkin</>],
+          text: ["Сентябрь. Новый театральный и музейный сезон\nОктябрь. Золотая осень", "Septembre. Nouvelle saison théâtrale et culturelle\nOctobre. Automne d’or. Période préférée de Poushkine", "September. New theatre and cultural season\nOctober. Gold autumn. Favourite period of Pushkin"],
+          video: ["JTLXYSbegUk", "JTLXYSbegUk", "JTLXYSbegUk"],
+          imgBottom: [true, true, true],
+          circle: [true, true, true],
+          PDF: ["Programs/Programs/AutumnRU.pdf", "Programs/Programs/AutumnFR.pdf", ""],
+        },
+        Winter: {
+          name: ["Зима", "Hiver", "Winter"],
+          title: ["Зимой", "En hiver", "Winter"],
+          // text: [<>Традиционные рождественские ярмарки.<br />Новый год в традициях Петербурга  </>, <>Nouvel An à la russe. Hiver enneigé, vacances de janvier</>, <><b>Christmas markets.</b> New Year Eve à la russe. Snowy landscapes, January holidays </>],
+          text: ["Традиционные рождественские ярмарки.\nНовый год в традициях Петербурга", "Nouvel An à la russe. Hiver enneigé, vacances de janvier", "Christmas markets. New Year Eve à la russe. Snowy landscapes, January holidays"],
+          img: ["0.jpg", "0.jpg", "0.jpg"],
+          imgTop: [true, true, true],
+          PDF: ["Programs/Programs/WinterRU.pdf", "Programs/Programs/WinterFR.pdf", ""],
+        },
+        Spring: {
+          name: ["Весна", "Printemps", "Spring"],
+          title: ["Весной", "Au printemps", "Spring"],
+          // text: [<><b>Конец апреля.</b> Церемония открытия фонтанов в Петергофе<br /><b>9 мая.</b> День Победы и салют, который надо смотреть с воды<br /><b>Май-июнь.</b> Экономический и Юридический Международные Форумы</>, <><b>Fin avril.</b> Cérémonie du lancement des fontaines au Péterhof<br /><b>Le 9 mai.</b> Jour de la Victoire<br /><b>Mai – juin.</b> FORUMs internationaux juridique et économique</>, <><b>End of April.</b> Ceremony of the fountains opening in Peterhof<br /><b>9 May.</b> Victory Day<br /><b>May – June.</b> International Legal and Economic FORUMs</>],
+          text: ["Конец апреля. Церемония открытия фонтанов в Петергофе\n9 мая. День Победы и салют, который надо смотреть с воды\nМай-июнь. Экономический и Юридический Международные Форумы", "Fin avril. Cérémonie du lancement des fontaines au Péterhof\nLe 9 mai. Jour de la Victoire\nMai – juin. FORUMs internationaux juridique et économique", "End of April. Ceremony of the fountains opening in Peterhof\n9 May. Victory Day\nMay – June. International Legal and Economic FORUMs"],
+          img: ["1.jpg", "1.jpg", "1.jpg"],
+          imgBottom: [true, true, true],
+          PDF: ["Programs/Programs/SpringRU.pdf", "Programs/Programs/SpringFR.pdf", ""],
+        },
+        Summer: {
+          name: ["Лето", "Eté", "Summer"],
+          title: ["Летом", "En été", "Summer"],
+          // text: [<><b>Белые ночи</b><br /><b>Май – июль.</b> Фестиваль «Звезды Белых ночей» в Мариинском театре<br /><b>Июнь.</b> Гастрономический фестиваль. Алые Паруса<br /><b>Конец июля.</b> День ВМФ и парад кораблей<br /><b>Август.</b> Наименее загруженный летний месяц</>, <><b>Mai – juillet.</b> Festival « Les étoiles des nuits blanches » au Mariinsky théâtre<br /><b>Nuits blanches.</b> Période d’été quand s’ouvre la navigation des bateaux<br /><b>Juin.</b> Festival gastronomique de Saint Pétersbourg. « Voiles rouges », fin d’année scolaire<br /><b>Fin juillet.</b> Parade navale militaires<br /><b>Août.</b> Période de beau temps moins touristique</>, <><b>May – July.</b> «Stars of the White Nights» festival at the Mariinsky theatre<br /><b>White nights.</b> Navigation season<br /><b>June.</b> Saint Petersburg Gastronomic Festival. «Scarlet Sails», end of the academic year<br /><b>End of July.</b> Navy Day celebrations<br /><b>August.</b> Period of good weather and lower tourist traffic</>],
+          text: ["Белые ночи\nМай – июль. Фестиваль «Звезды Белых ночей» в Мариинском театре\nИюнь. Гастрономический фестиваль. Алые Паруса\nКонец июля. День ВМФ и парад кораблей\nАвгуст. Наименее загруженный летний месяц", "Mai – juillet. Festival « Les étoiles des nuits blanches » au Mariinsky théâtre\nNuits blanches. Période d’été quand s’ouvre la navigation des bateaux\nJuin. Festival gastronomique de Saint Pétersbourg. « Voiles rouges », fin d’année scolaire\nFin juillet. Parade navale militaires\nAoût. Période de beau temps moins touristique", "May – July. «Stars of the White Nights» festival at the Mariinsky theatre\nWhite nights. Navigation season\nJune. Saint Petersburg Gastronomic Festival. «Scarlet Sails», end of the academic year\nEnd of July. Navy Day celebrations\nAugust. Period of good weather and lower tourist traffic"],
+          video: ["hLL0Xe_S00I", "hLL0Xe_S00I", "hLL0Xe_S00I"],
+          circle: [true, true, true],
+          imgTop: [true, true, true],
+          PDF: ["Programs/Programs/SummerRU.pdf", "Programs/Programs/SummerFR.pdf", ""],
+        }
       },
-      proposalPDF: ["", "", ""],
     },
   }
 }
