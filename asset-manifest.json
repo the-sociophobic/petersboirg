@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/petersboirg/static/css/main.58d91f4f.chunk.css",
-    "main.js": "/petersboirg/static/js/main.9e9bc507.chunk.js",
-    "main.js.map": "/petersboirg/static/js/main.9e9bc507.chunk.js.map",
+    "main.css": "/petersboirg/static/css/main.205b70f3.chunk.css",
+    "main.js": "/petersboirg/static/js/main.f4b345f7.chunk.js",
+    "main.js.map": "/petersboirg/static/js/main.f4b345f7.chunk.js.map",
     "runtime-main.js": "/petersboirg/static/js/runtime-main.88192d38.js",
     "runtime-main.js.map": "/petersboirg/static/js/runtime-main.88192d38.js.map",
-    "static/js/2.b6bfc331.chunk.js": "/petersboirg/static/js/2.b6bfc331.chunk.js",
-    "static/js/2.b6bfc331.chunk.js.map": "/petersboirg/static/js/2.b6bfc331.chunk.js.map",
+    "static/js/2.2adf3c9f.chunk.js": "/petersboirg/static/js/2.2adf3c9f.chunk.js",
+    "static/js/2.2adf3c9f.chunk.js.map": "/petersboirg/static/js/2.2adf3c9f.chunk.js.map",
     "index.html": "/petersboirg/index.html",
-    "static/css/main.58d91f4f.chunk.css.map": "/petersboirg/static/css/main.58d91f4f.chunk.css.map",
-    "static/js/2.b6bfc331.chunk.js.LICENSE.txt": "/petersboirg/static/js/2.b6bfc331.chunk.js.LICENSE.txt",
+    "static/css/main.205b70f3.chunk.css.map": "/petersboirg/static/css/main.205b70f3.chunk.css.map",
+    "static/js/2.2adf3c9f.chunk.js.LICENSE.txt": "/petersboirg/static/js/2.2adf3c9f.chunk.js.LICENSE.txt",
     "static/media/0.jpg": "/petersboirg/static/media/0.b096be1a.jpg",
     "static/media/1.jpg": "/petersboirg/static/media/1.d706b0ff.jpg",
     "static/media/10.jpg": "/petersboirg/static/media/10.bdcffc10.jpg",
@@ -46,7 +46,15 @@
     "static/media/7.jpg": "/petersboirg/static/media/7.dd4a0914.jpg",
     "static/media/8.jpg": "/petersboirg/static/media/8.a6a30355.jpg",
     "static/media/9.jpg": "/petersboirg/static/media/9.d044bf45.jpg",
-    "static/media/index.sass": "/petersboirg/static/media/oi.ba7e9ae9.svg",
+    "static/media/AutumnFR.pdf": "/petersboirg/static/media/AutumnFR.b21351b3.pdf",
+    "static/media/AutumnRU.pdf": "/petersboirg/static/media/AutumnRU.92ac8630.pdf",
+    "static/media/index.sass": "/petersboirg/static/media/pdf.8d315239.svg",
+    "static/media/SpringFR.pdf": "/petersboirg/static/media/SpringFR.0469b951.pdf",
+    "static/media/SpringRU.pdf": "/petersboirg/static/media/SpringRU.8400ed44.pdf",
+    "static/media/SummerFR.pdf": "/petersboirg/static/media/SummerFR.f4c05301.pdf",
+    "static/media/SummerRU.pdf": "/petersboirg/static/media/SummerRU.48350517.pdf",
+    "static/media/WinterFR.pdf": "/petersboirg/static/media/WinterFR.f2ceaa3f.pdf",
+    "static/media/WinterRU.pdf": "/petersboirg/static/media/WinterRU.4808506a.pdf",
     "static/media/arrow.svg": "/petersboirg/static/media/arrow.530de3a9.svg",
     "static/media/background.jpg": "/petersboirg/static/media/background.b9d9bd2c.jpg",
     "static/media/clip-path.svg": "/petersboirg/static/media/clip-path.a96ed9f1.svg",
@@ -64,8 +72,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.88192d38.js",
-    "static/js/2.b6bfc331.chunk.js",
-    "static/css/main.58d91f4f.chunk.css",
-    "static/js/main.9e9bc507.chunk.js"
+    "static/js/2.2adf3c9f.chunk.js",
+    "static/css/main.205b70f3.chunk.css",
+    "static/js/main.f4b345f7.chunk.js"
   ]
 }
