@@ -3,6 +3,7 @@ import React from 'react'
 import Img from 'components/Img'
 import Video from 'components/Video'
 import notEmpty from 'utils/notEmpty'
+import addNewLines from 'utils/addNewLines'
 
 
 class Paragraph extends React.Component {
@@ -34,7 +35,7 @@ class Paragraph extends React.Component {
             }
             {notEmpty(this.props.text) &&
               <div className="paragraph__text__text">
-                {this.props.text}
+                {addNewLines(this.props.text)}
               </div>
             }
           </div>

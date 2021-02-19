@@ -78,7 +78,7 @@ export default class Header extends React.Component {
         {this.renderNav()}
         {this.renderLang()}
         <Link
-          to=""
+          to="main"
           {...this.props}
           className="header__logo"
         >

@@ -97,11 +97,11 @@ html
   @media (min-width: 1024px)
     font-size: 18px
   @media (min-width: 1200px)
-    font-size: 22px
-  @media (min-width: 1400px)
-    font-size: 26px
-  @media (min-width: 1600px)
-    font-size: 30px
+    font-size: 20px
+  // @media (min-width: 1400px)
+  //   font-size: 24px
+  // @media (min-width: 1600px)
+  //   font-size: 26px
 
 .App
   @extend .d-flex
@@ -263,7 +263,8 @@ html
       margin: 6px 0 20px
     &__projects
       border-top: $border
-      height: 200px
+      @media screen and ( min-width: 768px )
+        height: calc(200rem / 33)
       @extend .row
       &__item
         @extend .col-md-3
@@ -303,7 +304,11 @@ html
     padding-bottom: calc(60rem / 33)
     &__text
       @extend .row
-      @extend .py-4
+      &:first-child
+        padding-top: calc(71rem / 33)
+        padding-bottom: calc(30rem / 33)
+      &:last-child
+        padding-bottom: calc(72rem / 33)
       &__address
         @extend .col-9
         @extend .col-md-6
@@ -313,7 +318,7 @@ html
       &__email
         @extend .col-9
         @extend .col-md-3
-        @extend .text-center
+        @extend .text-md-center
         a
           color: $footer-light
     &__logos
@@ -414,6 +419,7 @@ html
     padding-left: $off-len
     padding-right: $off-len
     font-size: calc(82rem / 33)
+    line-height: calc(97 / 82)
     @include media-breakpoint-down(sm)
       font-size: calc(60rem / 33)
     // margin-bottom: calc(177rem / 30)
@@ -522,6 +528,8 @@ $dropdown-transition: .3s
 .dropdown
   width: 100%
   border-top: $border
+  *
+    font-family: 'Futura New', sans-serif
   .second-app &
     margin-bottom: -$border-width
   @extend .d-flex
@@ -795,6 +803,9 @@ $dropdown-transition: .3s
       @extend .col-md-4
       @extend .col-9
       @extend .pl-5
+      @extend .d-flex
+      @extend .flex-column
+      @extend .justify-content-center
       *
         color: $main !important
       &__title
@@ -985,9 +996,10 @@ $dropdown-transition: .3s
   &__paragraphs
     &__item
       &:last-child
+      // &:last-child + &
         border-top: $border
-      &:nth-child(2)
-        border-top: 0
+      // &:nth-child(2)
+      //   border-top: 0
       &--half
         &:nth-of-type(even)
           border-left: $border
@@ -1048,3 +1060,17 @@ $dropdown-transition: .3s
           background-position: center
           background-repeat: no-repeat
           background-size: contain
+
+
+
+.concept
+  &__header
+    position: relative
+    width: 100%
+    height: calc(688rem / 33)
+    &::after
+      clip-path: circle(60% at 50% 105%)
+      background-color: $background-color
+      position: absolute
+      bottom: 0
+      left: 50%

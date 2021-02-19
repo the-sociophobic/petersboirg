@@ -510,6 +510,14 @@ const defaultMessages = {
         }
       },
     },
+
+    Concept: {
+      header: {
+        title: ["Концепт", "Concept", "Concept"],
+        img: ["Concept/0.jpg", "Concept/0.jpg", "Concept/0.jpg"],
+        
+      }
+    }
   }
 }
 

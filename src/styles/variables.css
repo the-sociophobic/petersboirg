@@ -1,6 +1,7 @@
 :root {
   --main-color: #F14421;
-  --background-color: #E0D5CD;
+  /* --background-color: #DFD4CC; */
+  --background-color: #FFF7F1;
 }
 .second-app {
   --main-color: #E8E2DC;

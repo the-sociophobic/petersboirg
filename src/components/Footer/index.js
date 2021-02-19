@@ -47,7 +47,7 @@ export default class Footer extends React.Component {
               <b><FormattedMessage id="Footer.officeSPbAddress" /></b>
             </div>
             <div className="footer__down__text__email">
-              <br />
+              <br className="d-none d-md-block" />
               <ExternalLink to="mailto:visit@spbcityguide.ru">
                 visit@spbcityguide.ru
               </ExternalLink>
@@ -60,7 +60,7 @@ export default class Footer extends React.Component {
               <b><FormattedMessage id="Footer.officeLyonAddress" /></b>
             </div>
             <div className="footer__down__text__email">
-              <br />
+              <br className="d-none d-md-block" />
               <ExternalLink to="mailto:rguironnet@yahoo.fr">
                 rguironnet@yahoo.fr
               </ExternalLink>
