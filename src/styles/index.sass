@@ -528,10 +528,9 @@ $dropdown-transition: .3s
 .dropdown
   width: 100%
   border-top: $border
-  *
-    font-family: 'Futura New', sans-serif
   .second-app &
     margin-bottom: -$border-width
+  .second-app &
   @extend .d-flex
   @extend .flex-column
   &__title
@@ -603,6 +602,7 @@ $dropdown-transition: .3s
         border-top: $border-width solid $dark
         border-bottom: $border-width solid $dark
       &__text
+        font-family: 'Futura New', sans-serif
         color: $main
         font-size: calc(30rem / 33)
         position: relative
